@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Simline Kitchen - Modern Kitchen Solutions</title>
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Top Header -->
+    <div class="top-header hidden md:block">
+        <div class="container mx-auto px-6 md:px-10 py-2">
+            <div class="header-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <a href="mailto:info@slimlinekitchens.com" class="contact-link">
+                        <i class="fas fa-envelope icon-spacing"></i>
+                        <span class="text-sm">info@slimlinekitchens.com</span>
+                    </a>
+                    <a href="tel:+919650100908" class="contact-link">
+                        <i class="fas fa-phone icon-spacing"></i>
+                        <span class="text-sm">+91-9650100908</span>
+                    </a>
+                </div>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube transition-transform"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="main-header border-b border-[#f5f5f527]">
+        <div class="container mx-auto px-6 md:px-10 py-3">
+            <div class="nav-wrapper">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="assets/images/simline-kitchen-logo-2.png"
+                            class="w-32 sm:w-48" alt=""></a>
+                </div>
+
+                <div class="flex gap-14">
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link">Services</a>
+                        <a href="#" class="nav-link">Products</a>
+                        <a href="#" class="nav-link">Contact</a>
+                    </nav>
+                    <div class="flex gap-5">
+                        <button id="searchToggle" class="group search-toggle w-10 h-10 md:w-10 md:h-10 bg-[#8a101045] rounded-full flex items-center justify-center">
+                            <i class="fas fa-search text-sm md:text-base text-[#a30000] group-hover:text-[#800000] transition-colors"></i>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button id="menuToggle" class="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Overlay -->
+        <div id="searchOverlay" class="search-overlay">
+            <div class="search-container">
+                <div class="search-header">
+                    <h2 class="search-title">Search</h2>
+                    <button id="closeSearch" class="close-search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-content">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="searchInput" class="search-input"
+                            placeholder="Search for products, services...">
+                        <button class="search-submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions">
+                        <h3 class="suggestions-title">Popular Searches</h3>
+                        <div class="suggestions-list">
+                            <a href="#" class="suggestion-item">Kitchen Cabinets</a>
+                            <a href="#" class="suggestion-item">Wardrobe Accessories</a>
+                            <a href="#" class="suggestion-item">Steel Bins</a>
+                            <a href="#" class="suggestion-item">SS Pullouts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenuOverlay" class="mobile-overlay"></div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <h2 class="mobile-menu-title">Menu</h2>
+                    <button id="closeMenu" class="close-menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="#" class="mobile-nav-link">Home</a>
+                    <a href="#" class="mobile-nav-link">About</a>
+                    <a href="#" class="mobile-nav-link">Services</a>
+                    <a href="#" class="mobile-nav-link">Products</a>
+                    <a href="#" class="mobile-nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-slider">
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-arrow prev-arrow" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next-arrow" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <button class="slider-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="slider-dot" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="slider-dot" data-slide="2" aria-label="Go to slide 3"></button>
+        </div>
+
+        <!-- Slider Items -->
+        <div class="slider-container">
+            <div class="slider-item active">
+                <div class="slider-image" style="background-image: url('assets/images/slider/slider-1.jpg')"></div>
+                <div
+                    class="container mx-auto px-6 md:px-10 py-2 h-full flex justify-center md:justify-start items-center">
+                    <div class="slider-content">
+                        <h1 class="slider-title">Transform Your Kitchen</h1>
+                        <p class="slider-subtitle">Modern designs, premium quality, and expert craftsmanship</p>
+                        <button class="slider-button">Get Started</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item">
+                <div class="slider-image" style="background-image: url('assets/images/slider/slider-2.jpg')"></div>
+                <div
+                    class="container mx-auto px-6 md:px-10 py-2 h-full flex justify-center md:justify-start items-center">
+                    <div class="slider-content">
+                        <h1 class="slider-title">Premium Kitchen Solutions</h1>
+                        <p class="slider-subtitle">Custom designs that match your lifestyle</p>
+                        <button class="slider-button">Explore Designs</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item">
+                <div class="slider-image" style="background-image: url('assets/images/slider/slider-3.jpg')"></div>
+                <div
+                    class="container mx-auto px-6 md:px-10 py-2 h-full flex justify-center md:justify-start items-center">
+                    <div class="slider-content">
+                        <h1 class="slider-title">Expert Installation</h1>
+                        <p class="slider-subtitle">Professional service and timely delivery</p>
+                        <button class="slider-button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section py-20 bg-black text-white">
+        <div class="container mx-auto px-6 md:px-10">
+            <!-- Section Header -->
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-[600] mb-3">Our Story</h2>
+                <div class="w-24 h-[2px] bg-[#a30000] mx-auto"></div>
+                <p class="text-gray-300 text-sm md:text-lg leading-relaxed mt-10">At Simline Kitchen, we've been
+                    transforming spaces and creating dream kitchens for over a decade. Our journey began with a simple
+                    vision: to bring luxury and functionality together in every kitchen we design. Known widely for
+                    manufacturing, wholesaling and supplying a quality assured array of Kitchen and Wardrobe
+                    Accessories, we "Slimline (a Product Of Kitchens)" started our operation in the year of 2002. In
+                    short span of time we have gained a distinct position in the market by offering Baskets, Steel Bins
+                    and SS Pullouts. These accessories are manufactured and designed by using top quality materials by
+                    our experienced professionals with the help of our top notch tools and technology. We are offering
+                    these accessories in various specifications to suit the diverse needs and demands of our clients in
+                    most effective manner. Our offered accessories are highly appreciated in the market for their
+                    excellent finishing, designs and longer service life.</p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Image Section -->
+                <div class="relative">
+                    <div class="relative z-10 h-full">
+                        <img src="assets/images/slider/slider-1.jpg" alt="Our Showroom"
+                            class="rounded-md shadow-2xl h-full object-cover">
+                        <div
+                            class="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 w-20 md:w-32 h-20 md:h-32 border-4 border-[#a30000] rounded-lg -z-10">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -top-4 md:-top-6 -left-4 md:-left-6 w-20 md:w-32 h-20 md:h-32 border-4 border-[#a30000] rounded-lg">
+                    </div>
+                </div>
+
+                <!-- Content Section -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-[600] text-[#a30000]">Crafting Excellence Since 2002</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                            At Simline Kitchen, we've been transforming spaces and creating dream kitchens for over a
+                            decade. Our journey began with a simple vision: to bring luxury and functionality together
+                            in every kitchen we design.
+                        </p>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-4 bg-[#1a1a1a] rounded-lg">
+                            <div class="text-xl md:text-4xl font-[600] text-[#a30000] mb-2 flex justify-center">
+                                <span class="counter w-[50px] md:w-[100px] flex justify-end font-[600]"
+                                    data-target="1000">0</span>+
+                            </div>
+                            <div class="text-gray-300 text-sm md:text-base">Satisfied Customers</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#1a1a1a] rounded-lg">
+                            <div class="text-xl md:text-4xl font-[600] text-[#a30000] mb-2 flex justify-center">
+                                <span class="counter w-[50px] md:w-[100px] flex justify-end font-[600]"
+                                    data-target="500">0</span>+
+                            </div>
+                            <div class="text-gray-300 text-sm md:text-base">Successful Installations</div>
+                        </div>
+                    </div>
+
+                    <!-- Features List -->
+                    <div class="space-y-3 md:space-y-4 mt-6 md:mt-8">
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                            <div
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#a30000] flex items-center justify-center">
+                                <i class="fas fa-check text-white text-xs md:text-sm"></i>
+                            </div>
+                            <span class="text-gray-300 text-sm md:text-base">Premium Quality Materials</span>
+                        </div>
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                            <div
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#a30000] flex items-center justify-center">
+                                <i class="fas fa-check text-white text-xs md:text-sm"></i>
+                            </div>
+                            <span class="text-gray-300 text-sm md:text-base">Expert Craftsmanship</span>
+                        </div>
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                            <div
+                                class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#a30000] flex items-center justify-center">
+                                <i class="fas fa-check text-white text-xs md:text-sm"></i>
+                            </div>
+                            <span class="text-gray-300 text-sm md:text-base">Timely Project Delivery</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="mt-6 md:mt-8">
+                        <a href="#"
+                            class="inline-block px-6 md:px-8 py-2 md:py-3 bg-[#a30000] text-white text-sm md:text-base rounded-lg hover:bg-[#a30000] transition-colors duration-300">
+                            Learn More About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="mt-20 hidden">
+                <h3 class="text-3xl font-bold text-center mb-12">Meet Our Expert Team</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="team-member bg-[#1a1a1a] rounded-lg overflow-hidden group">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/team/team-1.jpg" alt="Team Member"
+                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">John Smith</h4>
+                            <p class="text-[#a30000] mb-4">Lead Designer</p>
+                            <p class="text-gray-300">15+ years of experience in kitchen design and architecture.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-member bg-[#1a1a1a] rounded-lg overflow-hidden group">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/team/team-2.jpg" alt="Team Member"
+                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Sarah Johnson</h4>
+                            <p class="text-[#a30000] mb-4">Project Manager</p>
+                            <p class="text-gray-300">Expert in managing complex kitchen renovation projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-member bg-[#1a1a1a] rounded-lg overflow-hidden group">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/team/team-3.jpg" alt="Team Member"
+                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Michael Brown</h4>
+                            <p class="text-[#a30000] mb-4">Master Craftsman</p>
+                            <p class="text-gray-300">Specialized in custom kitchen cabinet making and installation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <div class="container-custom py-16">
+        <h2 class="section-title">Why Choose Simline Kitchen?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card">
+                <i class="fas fa-tools feature-icon"></i>
+                <h3 class="feature-title">Premium Quality</h3>
+                <p class="feature-text">High-quality materials and expert craftsmanship</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-paint-brush feature-icon"></i>
+                <h3 class="feature-title">Custom Design</h3>
+                <p class="feature-text">Tailored solutions for your unique space</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock feature-icon"></i>
+                <h3 class="feature-title">Timely Delivery</h3>
+                <p class="feature-text">On-time project completion and installation</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Preview -->
+    <div class="bg-gray-100 py-16">
+        <div class="container-custom">
+            <h2 class="section-title">Our Products</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card">
+                    <img src="assets/images/products/product-1.jpg" alt="Modern Kitchen" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Modern Kitchen Set</h3>
+                        <p class="product-text">Contemporary design with premium finishes</p>
+                        <button class="product-link">Learn More →</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/products/product-2.jpg" alt="Classic Kitchen" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Classic Kitchen Set</h3>
+                        <p class="product-text">Timeless elegance for your home</p>
+                        <button class="product-link">Learn More →</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="assets/images/products/product-3.jpg" alt="Minimalist Kitchen" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Minimalist Kitchen Set</h3>
+                        <p class="product-text">Clean lines and functional design</p>
+                        <button class="product-link">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container-custom py-16">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <form class="space-y-4">
+                    <div>
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label">Message</label>
+                        <textarea class="form-textarea" rows="4"></textarea>
+                    </div>
+                    <button class="submit-button">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3 class="footer-title">Get in Touch</h3>
+                <div class="space-y-4">
+                    <p class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        123 Kitchen Street, Design City
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        +1 234 567 890
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        info@simlinekitchen.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="footer-title">Simline Kitchen</h3>
+                    <p class="footer-text">Creating beautiful kitchens for modern homes.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Products</a></li>
+                        <li><a href="#" class="footer-link">Services</a></li>
+                        <li><a href="#" class="footer-link">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Kitchen Design</a></li>
+                        <li><a href="#" class="footer-link">Installation</a></li>
+                        <li><a href="#" class="footer-link">Renovation</a></li>
+                        <li><a href="#" class="footer-link">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2024 Simline Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- custom js -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
