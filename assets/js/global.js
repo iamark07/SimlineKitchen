@@ -65,9 +65,9 @@ class SearchOverlay {
 class MobileMenu {
     constructor() {
         this.menuToggle = document.getElementById('menuToggle');
-        this.closeMenu = document.getElementById('closeMenu');
         this.mobileMenu = document.getElementById('mobileMenu');
         this.mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        this.closeMenu = document.getElementById('closeMenu');
         this.menuState = {
             isOpen: false,
             toggle() {
@@ -75,18 +75,27 @@ class MobileMenu {
                 return this.isOpen;
             }
         };
-
         this.init();
     }
 
-    slideInMenu() {
-        this.mobileMenu.classList.add('mobile-menu-open');
-        this.mobileMenuOverlay.classList.remove('hidden');
-    }
-
-    slideOutMenu() {
-        this.mobileMenu.classList.remove('mobile-menu-open');
-        this.mobileMenuOverlay.classList.add('hidden');
+    init() {
+        if (this.menuToggle && this.closeMenu && this.mobileMenu && this.mobileMenuOverlay) {
+            this.menuToggle.addEventListener('click', () => this.handleMenuToggle());
+            this.closeMenu.addEventListener('click', () => this.handleMenuToggle());
+            this.mobileMenuOverlay.addEventListener('click', (e) => this.handleOverlayClick(e));
+            
+            // Add click event for dropdown toggles
+            const dropdownToggles = document.querySelectorAll('.nav-dropdown > a');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const dropdown = toggle.parentElement;
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        }
     }
 
     handleMenuToggle() {
@@ -98,18 +107,22 @@ class MobileMenu {
         }
     }
 
+    slideInMenu() {
+        this.mobileMenu.classList.add('mobile-menu-open');
+        this.mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    slideOutMenu() {
+        this.mobileMenu.classList.remove('mobile-menu-open');
+        this.mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
     handleOverlayClick(event) {
         if (event.target === this.mobileMenuOverlay) {
             this.menuState.isOpen = false;
             this.slideOutMenu();
-        }
-    }
-
-    init() {
-        if (this.menuToggle && this.closeMenu && this.mobileMenu && this.mobileMenuOverlay) {
-            this.menuToggle.addEventListener('click', () => this.handleMenuToggle());
-            this.closeMenu.addEventListener('click', () => this.handleMenuToggle());
-            this.mobileMenuOverlay.addEventListener('click', (e) => this.handleOverlayClick(e));
         }
     }
 }
