@@ -133,4 +133,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerScroll = new HeaderScroll();
     new MobileMenu();
     new SearchOverlay();
+
+    // --- Nested Mobile Dropdown Functionality ---
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu) {
+        const nestedDropdownItems = mobileMenu.querySelectorAll('.dropdown-item-nested');
+
+        nestedDropdownItems.forEach(item => {
+            const button = item.querySelector('.dropdown-item');
+            if (button) {
+                button.addEventListener('click', function(event) {
+                    // Prevent the default link behavior if the button is also a link
+                    event.preventDefault();
+                    // Toggle the active class on the parent nested item
+                    item.classList.toggle('active');
+
+                    // Optional: Close other open nested dropdowns at the same level
+                    nestedDropdownItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.parentElement === item.parentElement) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            }
+        });
+    }
 });

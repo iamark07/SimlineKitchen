@@ -64,12 +64,36 @@
                                 <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
                             </button>
                             <div class="dropdown-menu text-xs">
-                                <a href="#" class="dropdown-item">
-                                    Kitchen Cabinets
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Kitchen Cabinets
-                                </a>
+                                <!-- Level 1 Dropdown Item -->
+                                <a href="#" class="dropdown-item">Wardrobe Accessories</a>
+                                <!-- Level 1 Dropdown Item -->
+                                <a href="#" class="dropdown-item">Bathroom Fittings</a>
+                                <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                                <div class="dropdown-item-nested text-nowrap">
+                                    <button class="dropdown-item flex items-center justify-between w-full">
+                                        Kitchen Accessories
+                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                    </button>
+                                    <!-- Level 2 Dropdown Menu -->
+                                    <div class="dropdown-menu-nested text-xs">
+                                        <a href="#" class="dropdown-item">Cabinet Hinges</a>
+                                        <a href="#" class="dropdown-item">Tandem Box</a>
+                                        <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                        <div class="dropdown-item-nested">
+                                            <button class="dropdown-item flex items-center justify-between w-full">
+                                                Pullout Solutions
+                                                <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                            </button>
+                                            <!-- Level 3 Dropdown Menu -->
+                                            <div class="dropdown-menu-nested sub-dropdown-menu-nested text-xs">
+                                                <a href="#" class="dropdown-item">SS Pullouts</a>
+                                                <a href="#" class="dropdown-item">Wire Baskets</a>
+                                                <a href="#" class="dropdown-item">Other Pullouts</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="dropdown-item">Rolling Shutters</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <a href="#" class="nav-link">Services</a>
@@ -110,18 +134,36 @@
                         <i class="fas fa-chevron-down ml-2"></i>
                     </a>
                     <div class="dropdown-menu text-[12px]">
-                        <a href="#" class="dropdown-item">
-                            Kitchen Cabinets
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Wardrobe Accessories
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Steel Bins
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            SS Pullouts
-                        </a>
+                        <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                        <div class="dropdown-item-nested">
+                            <button class="dropdown-item flex items-center justify-between w-full">
+                                Kitchen Accessories
+                                <i class="fas fa-chevron-right text-xs ml-2"></i>
+                            </button>
+                            <!-- Level 2 Dropdown Menu -->
+                            <div class="dropdown-menu-nested text-[12px]">
+                                <a href="#" class="dropdown-item">Cabinet Hinges</a>
+                                <a href="#" class="dropdown-item">Tandem Box</a>
+                                <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                <div class="dropdown-item-nested">
+                                    <button class="dropdown-item flex items-center justify-between w-full">
+                                        Pullout Solutions
+                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                    </button>
+                                    <!-- Level 3 Dropdown Menu -->
+                                    <div class="dropdown-menu-nested text-[12px]">
+                                        <a href="#" class="dropdown-item">SS Pullouts</a>
+                                        <a href="#" class="dropdown-item">Wire Baskets</a>
+                                        <a href="#" class="dropdown-item">Other Pullouts</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="dropdown-item">Rolling Shutters</a>
+                            </div>
+                        </div>
+                        <!-- Level 1 Dropdown Item -->
+                        <a href="#" class="dropdown-item">Wardrobe Accessories</a>
+                        <!-- Level 1 Dropdown Item -->
+                        <a href="#" class="dropdown-item">Bathroom Fittings</a>
                     </div>
                 </div>
                 <a href="#" class="mobile-nav-link">Services</a>
@@ -135,21 +177,21 @@
     <div id="searchOverlay" class="search-overlay">
         <div class="search-container">
             <div class="search-header">
-                <h2 class="search-title">Search</h2>
+                <h2 class="search-title syne-font">Search</h2>
                 <button id="closeSearch" class="close-search">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="search-content">
                 <div class="search-input-wrapper">
-                    <input type="text" id="searchInput" class="search-input"
+                    <input type="text" id="searchInput" class="search-input syne-font"
                         placeholder="Search for products, services...">
                     <button class="search-submit">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
                 <div class="search-suggestions">
-                    <h3 class="suggestions-title">Popular Searches</h3>
+                    <h3 class="suggestions-title syne-font">Popular Searches</h3>
                     <div class="suggestions-list">
                         <a href="#" class="suggestion-item">Kitchen Cabinets</a>
                         <a href="#" class="suggestion-item">Wardrobe Accessories</a>
@@ -229,17 +271,70 @@
         </div>
     </div>
 
+    <!-- Benefits Section -->
+    <section class="benefits-section py-12 md:py-16">
+        <div class="container mx-auto px-6 md:px-10">
+            <div class="benefits-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- Benefit 1 -->
+                <div class="benefit-item flex items-center xl:justify-center gap-4">
+                    <div class="benefit-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-gift-line text-5xl text-[100]"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3 class="benefit-title text-lg font-[500] text-black syne-font">Gifts for clients</h3>
+                        <p class="benefit-description text-sm text-gray-700">Adipiscing elit</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-item flex items-center xl:justify-center gap-4">
+                    <div class="benefit-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-percent-line text-5xl text-[100]"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3 class="benefit-title text-lg font-[500] text-black syne-font">Special discounts</h3>
+                        <p class="benefit-description text-sm text-gray-700">Adipiscing elit</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-item flex items-center xl:justify-center gap-4">
+                    <div class="benefit-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-truck-line text-5xl text-[100]"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3 class="benefit-title text-lg font-[500] text-black syne-font">Fast shipping</h3>
+                        <p class="benefit-description text-sm text-gray-700">Adipiscing elit</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-item flex items-center xl:justify-center gap-4">
+                    <div class="benefit-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-customer-service-line text-5xl text-[100]"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3 class="benefit-title text-lg font-[500] text-black syne-font">Online support</h3>
+                        <p class="benefit-description text-sm text-gray-700">Adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about-section py-20 bg-black text-white">
         <div class="container mx-auto px-6 md:px-10">
             <!-- Section Header -->
             <div class="text-center mb-14">
-                <h2 class="text-4xl md:text-5xl font-[600] mb-3 relative inline-block">
-                    Our Story
-                    <!-- <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-[2px] bg-[#a30000]"></div> -->
-                </h2>
+                <div class="section-header">
+                    <h2 class="section-title text-3xl md:text-5xl font-[600] mb-3 relative inline-block">
+                        Our Story
+                        <!-- <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-[2px] bg-[#a30000]"></div> -->
+                    </h2>
+                </div>
                 <div class="mt-8">
-                    <span class="inline-block px-4 py-1 bg-[#a30000] text-white text-sm rounded-full">Est. 2002</span>
+                    <span class="inline-block px-4 py-1 bg-[#a30000] text-white text-sm rounded-full syne-font">Est. 2002</span>
                 </div>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed mt-5 my-24">At Simline Kitchen, we've been
                     transforming spaces and creating dream kitchens for over a decade. Our journey began with a simple
@@ -345,69 +440,238 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <div class="container-custom py-16">
-        <h2 class="section-title">Why Choose Simline Kitchen?</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card">
-                <i class="fas fa-tools feature-icon"></i>
-                <h3 class="feature-title">Premium Quality</h3>
-                <p class="feature-text">High-quality materials and expert craftsmanship</p>
+    <!-- Products Section -->
+    <section class="products-section py-12 md:py-16 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-10">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-8 md:mb-12 lg:mb-14">
+                <h2 class="section-title-2 text-3xl md:text-5xl font-[600] mb-3 relative inline-block">
+                    Our Products
+                    <div class="absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-[2px] bg-[#a30000]"></div>
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto px-4">Discover our premium collection of kitchen products, crafted with precision and designed for modern living.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-paint-brush feature-icon"></i>
-                <h3 class="feature-title">Custom Design</h3>
-                <p class="feature-text">Tailored solutions for your unique space</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-clock feature-icon"></i>
-                <h3 class="feature-title">Timely Delivery</h3>
-                <p class="feature-text">On-time project completion and installation</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- Products Preview -->
-    <div class="bg-gray-100 py-16">
-        <div class="container-custom">
-            <h2 class="section-title">Our Products</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="product-card">
-                    <img src="assets/images/products/product-1.jpg" alt="Modern Kitchen" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Modern Kitchen Set</h3>
-                        <p class="product-text">Contemporary design with premium finishes</p>
-                        <button class="btn btn-outline btn-icon">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+            <!-- Category Filter -->
+            <div class="category-filter mb-8 md:mb-10 lg:mb-12">
+                <div class="flex justify-center relative">
+                     <button id="categoryDropdownBtn" class="category-btn flex items-center gap-2 px-4 py-2 md:px-8 md:py-3 text-sm">
+                         <span id="selectedCategoryText" class="syne-font">All Products</span>
+                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                     </button>
+                     <div id="categoryOptions" class="category-options grid grid-cols-2 gap-2 p-2 md:p-3 syne-font">
+                         <button class="category-option active text-xs md:text-sm" data-category="all">All Products</button>
+                         <button class="category-option text-xs md:text-sm" data-category="cabinet-hinges">Cabinet Hinges</button>
+                         <button class="category-option text-xs md:text-sm" data-category="tandem-box">Tandem Box</button>
+                         <button class="category-option text-xs md:text-sm" data-category="sliding-fittings">Sliding Fittings</button>
+                         <button class="category-option text-xs md:text-sm" data-category="wicker-baskets">Wicker Baskets</button>
+                         <button class="category-option text-xs md:text-sm" data-category="rolling-shutters">Rolling Shutters</button>
+                         <button class="category-option text-xs md:text-sm" data-category="corner-solutions">Corner Solutions</button>
+                         <button class="category-option text-xs md:text-sm" data-category="bins">Bins</button>
+                         <button class="category-option text-xs md:text-sm" data-category="pullout-solutions">Pullout Solutions</button>
+                         <button class="category-option text-xs md:text-sm" data-category="pulldown-solutions">Pulldown Solutions</button>
+                         <button class="category-option text-xs md:text-sm" data-category="tandem-attachments">Tandem Attachments</button>
+                         <button class="category-option text-xs md:text-sm" data-category="lift-up">Lift Up</button>
+                         <button class="category-option text-xs md:text-sm" data-category="pvc-cutlery">PVC Cutlery</button>
+                         <button class="category-option text-xs md:text-sm" data-category="dish-rack">Dish Rack</button>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Product Card Example 1 (Cabinet Hinges) -->
+                <div class="product-card group h-full" data-id="1" data-category="cabinet-hinges">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-full">
+                        <img src="assets/images/slider/slider-1.jpg" alt="MS 3D HINGE" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">MS 3D HINGE</h3>
+                                <p class="text-xs md:text-sm text-gray-200 mb-2 md:mb-4">A durable and standard MS 3D hinge...</p>
+                                <button class="btn-view-details text-xs md:text-sm px-3 py-1 md:px-4 md:py-2">View Details</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="assets/images/products/product-2.jpg" alt="Classic Kitchen" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Classic Kitchen Set</h3>
-                        <p class="product-text">Timeless elegance for your home</p>
-                        <button class="btn btn-outline btn-icon">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+
+                <!-- Product Card Example 2 (Tandem Box) -->
+                 <div class="product-card group" data-id="23" data-category="tandem-box">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-full">
+                        <img src="assets/images/slider/slider-2.jpg" alt="SLIM BOX - DARK GREY" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">SLIM BOX - DARK GREY</h3>
+                                <p class="text-xs md:text-sm text-gray-200 mb-2 md:mb-4">Available in various sizes and prices.</p>
+                                <button class="btn-view-details text-xs md:text-sm px-3 py-1 md:px-4 md:py-2">View Details</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="assets/images/products/product-3.jpg" alt="Minimalist Kitchen" class="product-image">
-                    <div class="product-content">
-                        <h3 class="product-title">Minimalist Kitchen Set</h3>
-                        <p class="product-text">Clean lines and functional design</p>
-                        <button class="btn btn-outline btn-icon">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+
+                 <!-- Product Card Example 3 (Sliding Fittings) -->
+                 <div class="product-card group" data-id="25" data-category="sliding-fittings">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-full">
+                        <img src="assets/images/slider/slider-3.jpg" alt="60KG REVERSIBLE WITH BRUSH" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">60KG REVERSIBLE WITH BRUSH</h3>
+                                <p class="text-xs md:text-sm text-gray-200 mb-2 md:mb-4">60KG reversible sliding fitting.</p>
+                                <button class="btn-view-details text-xs md:text-sm px-3 py-1 md:px-4 md:py-2">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card Example 4 (Wicker Baskets) -->
+                 <div class="product-card group" data-id="28" data-category="wicker-baskets">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-full">
+                        <img src="assets/images/slider/slider-1.jpg" alt="IMPORTED PURE WOODEN" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">IMPORTED PURE WOODEN</h3>
+                                <p class="text-xs md:text-sm text-gray-200 mb-2 md:mb-4">Imported pure wooden wicker baskets.</p>
+                                <button class="btn-view-details text-xs md:text-sm px-3 py-1 md:px-4 md:py-2">View Details</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Pagination -->
+            <div class="pagination-container">
+                <button class="pagination-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="hidden sm:inline">Previous</span>
+                </button>
+                
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-number">8</button>
+                </div>
+
+                <button class="pagination-btn next-btn">
+                    <span class="hidden sm:inline">Next</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us py-16 md:py-20 lg:py-24">
+        <div class="container mx-auto px-6 md:px-10">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title text-3xl md:text-5xl font-[600] mb-3 relative inline-block">Why Choose Us</h2>
+                <p class="section-description text-gray-300 text-sm md:text-base leading-relaxed">Experience excellence in every detail with our premium kitchen solutions. We combine innovation, quality, and expertise to create your perfect kitchen space.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper flex justify-center items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Premium Quality</h3>
+                    <p class="feature-description">We use only the finest materials and components to ensure lasting durability and performance. Our commitment to quality is reflected in every product we deliver.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper flex justify-center items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Expert Craftsmanship</h3>
+                    <p class="feature-description">Our skilled artisans bring years of experience to create perfect kitchen solutions. Every detail is meticulously crafted to meet the highest standards.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper flex justify-center items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">Timely Delivery</h3>
+                    <p class="feature-description">We value your time and ensure prompt delivery and installation of all products. Our efficient logistics system guarantees on-time project completion.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper flex justify-center items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-description">Our dedicated support team is always ready to assist you with any queries. We provide comprehensive after-sales service and maintenance support.</p>
+                </div>
+            </div>
+
+            <!-- Details Grid -->
+            <div class="details-grid grid md:grid-cols-2 gap-5 mt-20">
+                <!-- Detail Card 1 -->
+                <div class="detail-card">
+                    <h3 class="detail-title">
+                        <i class="fas fa-check-circle"></i>
+                        Quality Assurance
+                    </h3>
+                    <ul class="detail-list">
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Premium grade materials sourced from trusted suppliers
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Rigorous quality control at every production stage
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            ISO certified manufacturing processes
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Comprehensive warranty on all products
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Detail Card 2 -->
+                <div class="detail-card">
+                    <h3 class="detail-title">
+                        <i class="fas fa-star"></i>
+                        Customer Benefits
+                    </h3>
+                    <ul class="detail-list">
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Free consultation and design planning
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Customized solutions for every space
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Professional installation by expert team
+                        </li>
+                        <li class="detail-item">
+                            <i class="fas fa-angle-right"></i>
+                            Regular maintenance and support services
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <div class="container-custom py-16">
@@ -453,47 +717,64 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container-custom">
-            <div class="grid md:grid-cols-4 gap-8">
+    <footer class="footer bg-black text-gray-300 py-16 md:py-20 relative overflow-hidden">
+        <!-- Subtle background gradient/objects -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="w-full h-full bg-radial-gradient from-[#a30000] to-black rounded-full mix-blend-screen blur-3xl"></div>
+        </div>
+        <div class="container-custom relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
                 <div>
-                    <h3 class="footer-title">Simline Kitchen</h3>
-                    <p class="footer-text">Creating beautiful kitchens for modern homes.</p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Home</a></li>
-                        <li><a href="#" class="footer-link">Products</a></li>
-                        <li><a href="#" class="footer-link">Services</a></li>
-                        <li><a href="#" class="footer-link">About</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Kitchen Design</a></li>
-                        <li><a href="#" class="footer-link">Installation</a></li>
-                        <li><a href="#" class="footer-link">Renovation</a></li>
-                        <li><a href="#" class="footer-link">Consultation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="index.html">
+                        <img src="assets/images/simline-kitchen-logo-2.png" class="w-44" alt="">
+                    </a>
+                    <p class="footer-text text-sm leading-relaxed text-gray-400 mt-5">Creating beautiful kitchens for modern homes.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                         <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                <div>
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Quick Links
+                         <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#hero" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
+                        <li><a href="#about" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> About Us</a></li>
+                        <li><a href="#products" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Products</a></li>
+                        <li><a href="#gallery" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Projects</a></li>
+                        <li><a href="#contact" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Services
+                          <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                       </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Wardrobe Solutions</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Bathroom Remodeling</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Installation Services</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i class="fas fa-chevron-right mr-2 text-xs"></i> Custom Cabinetry</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="footer-col space-y-4">
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Contact Us
+                        <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                    </h4>
+                    <p class="flex items-start text-gray-400 text-sm"><i class="fas fa-map-marker-alt mr-3 text-[#a30000] text-base"></i>Slimline (a Product Of Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana, India</p>
+                    <p class="flex items-center text-gray-400 text-sm"><i class="fas fa-phone mr-3 text-[#a30000] text-base"></i><a href="tel:+919650100908" class="hover:text-[#a30000] transition-colors duration-300">+91-9650100908</a></p>
+                    <p class="flex items-center text-gray-400 text-sm"><i class="fas fa-envelope mr-3 text-[#a30000] text-base"></i><a href="mailto:info@slimlinekitchens.com" class="hover:text-[#a30000] transition-colors duration-300">info@slimlinekitchens.com</a></p>
+                </div>
             </div>
-            <div class="footer-divider">
+            <div class="footer-divider pt-8 mt-8 border-t border-gray-700 text-center text-sm text-gray-500">
                 <p>&copy; 2024 Simline Kitchen. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
 
     <!-- custom js -->
     <script src="assets/js/global.js"></script>

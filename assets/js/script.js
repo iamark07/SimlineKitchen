@@ -1,45 +1,3 @@
-// Counter Animation
-class Counter {
-  constructor(element, target, duration = 2000) {
-    this.element = element;
-    this.target = target;
-    this.duration = duration;
-    this.start = 0;
-    this.current = 0;
-    this.increment = target / (duration / 16);
-    this.init();
-  }
-
-  init() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.startCounting();
-            observer.unobserve(this.element);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(this.element);
-  }
-
-  startCounting() {
-    const animate = () => {
-      this.current += this.increment;
-      if (this.current < this.target) {
-        this.element.textContent = Math.floor(this.current);
-        requestAnimationFrame(animate);
-      } else {
-        this.element.textContent = this.target;
-      }
-    };
-    animate();
-  }
-}
-
 // Hero Slider
 class HeroSlider {
   constructor() {
@@ -136,7 +94,135 @@ class HeroSlider {
   }
 }
 
-// Initialize all components when DOM is loaded
+// Counter Animation
+class Counter {
+  constructor(element, target, duration = 2000) {
+    this.element = element;
+    this.target = target;
+    this.duration = duration;
+    this.start = 0;
+    this.current = 0;
+    this.increment = target / (duration / 16);
+    this.init();
+  }
+
+  init() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.startCounting();
+            observer.unobserve(this.element);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(this.element);
+  }
+
+  startCounting() {
+    const animate = () => {
+      this.current += this.increment;
+      if (this.current < this.target) {
+        this.element.textContent = Math.floor(this.current);
+        requestAnimationFrame(animate);
+      } else {
+        this.element.textContent = this.target;
+      }
+    };
+    animate();
+  }
+}
+
+// Product Category Filtering and Display
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryDropdownBtn = document.getElementById('categoryDropdownBtn');
+    const categoryOptions = document.getElementById('categoryOptions');
+    const categoryOptionBtns = document.querySelectorAll('.category-option');
+    const selectedCategoryText = document.getElementById('selectedCategoryText');
+    const productCards = document.querySelectorAll('.product-card'); // Select all static product cards
+
+    // Toggle category options dropdown
+    if (categoryDropdownBtn && categoryOptions) {
+        categoryDropdownBtn.addEventListener('click', function() {
+            categoryOptions.classList.toggle('show');
+            categoryDropdownBtn.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!categoryDropdownBtn.contains(event.target) && !categoryOptions.contains(event.target)) {
+                categoryOptions.classList.remove('show');
+                categoryDropdownBtn.classList.remove('active');
+            }
+        });
+    }
+
+    // Function to filter products based on category
+    function filterProducts(category) {
+        productCards.forEach(card => {
+            const productCategory = card.getAttribute('data-category');
+            if (category === 'all' || productCategory === category) {
+                card.style.display = ''; // Show the card
+            } else {
+                card.style.display = 'none'; // Hide the card
+            }
+        });
+    }
+
+    // Add event listeners to category options
+    categoryOptionBtns.forEach(option => {
+        option.addEventListener('click', function() {
+            const selectedCategory = this.getAttribute('data-category');
+            selectedCategoryText.textContent = this.textContent;
+            filterProducts(selectedCategory);
+
+            // Update active class on category options
+            categoryOptionBtns.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Close dropdown after selection
+            if (categoryOptions) {
+                 categoryOptions.classList.remove('show');
+                 if (categoryDropdownBtn) {
+                    categoryDropdownBtn.classList.remove('active');
+                 }
+            }
+        });
+    });
+
+    // Initial display: show all products
+    filterProducts('all');
+
+    // Handle click on "View Details" buttons (do nothing for now)
+    const viewDetailsBtns = document.querySelectorAll('.btn-view-details');
+    viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default button behavior
+            // No action is taken for now as per requirement
+        });
+    });
+});
+
+// Add fade-in animation keyframes
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Initialize components when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   const slider = new HeroSlider();
 
