@@ -101,8 +101,8 @@
                         <a href="#" class="nav-link">Contact</a>
                     </nav>
                     <div class="flex gap-5">
-                        <button id="searchToggle" class="group search-toggle w-10 h-10 md:w-10 md:h-10 bg-[#8a101045] rounded-full flex items-center justify-center">
-                            <i class="fas fa-search text-sm md:text-base text-[#a30000] group-hover:text-[#800000] transition-colors"></i>
+                        <button id="searchToggle" class="group search-toggle w-[44px] h-[44px] md:w-10 md:h-10 bg-[#8a101045] rounded-full flex items-center justify-center">
+                            <i class="fas fa-search text-base text-[#a30000] group-hover:text-[#800000] transition-colors"></i>
                         </button>
                         <!-- Mobile Menu Button -->
                         <button id="menuToggle" class="menu-toggle">
@@ -125,7 +125,7 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <nav class="mobile-nav">
+            <nav class="mobile-nav text-nowrap">
                 <a href="#" class="mobile-nav-link">Home</a>
                 <a href="#" class="mobile-nav-link">About</a>
                 <div class="nav-dropdown">
@@ -151,7 +151,7 @@
                                         <i class="fas fa-chevron-right text-xs ml-2"></i>
                                     </button>
                                     <!-- Level 3 Dropdown Menu -->
-                                    <div class="dropdown-menu-nested text-[12px]">
+                                    <div class="dropdown-menu-nested sub-dropdown-menu-nested text-[12px]">
                                         <a href="#" class="dropdown-item">SS Pullouts</a>
                                         <a href="#" class="dropdown-item">Wire Baskets</a>
                                         <a href="#" class="dropdown-item">Other Pullouts</a>
@@ -204,7 +204,7 @@
     </div>
 
     <!-- Hero Section -->
-    <div class="hero-slider">
+    <section class="hero-slider">
         <!-- Slider Controls -->
         <div class="slider-controls">
             <button class="slider-arrow prev-arrow" aria-label="Previous slide">
@@ -269,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Benefits Section -->
     <section class="benefits-section py-12 md:py-16">
@@ -383,7 +383,7 @@
 
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-2 gap-6 mt-8">
-                        <div class="text-center p-6 bg-[#1a1a1a] rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="about_counter relative text-center p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
                             <div class="text-xl md:text-4xl font-[600] text-[#a30000] mb-2 flex justify-center">
                                 <span class="counter w-[50px] md:w-[100px] flex justify-end font-[600]"
                                     data-target="1000">0</span>
@@ -392,10 +392,10 @@
                             <div class="text-gray-300 text-sm md:text-base">Satisfied Customers</div>
                             <div class="mt-2 w-12 h-[2px] bg-[#a30000] mx-auto"></div>
                         </div>
-                        <div class="text-center p-6 bg-[#1a1a1a] rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="about_counter relative text-center p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
                             <div class="text-xl md:text-4xl font-[600] text-[#a30000] mb-2 flex justify-center">
                                 <span class="counter w-[50px] md:w-[100px] flex justify-end font-[600]"
-                                    data-target="500">0</span>
+                                    data-target="1500">0</span>
                                 <span class="text-[#a30000] font-[600]">+</span>
                             </div>
                             <div class="text-gray-300 text-sm md:text-base">Successful Installations</div>
@@ -447,7 +447,7 @@
             <div class="section-header text-center mb-8 md:mb-12 lg:mb-14">
                 <h2 class="section-title-2 text-3xl md:text-5xl font-[600] mb-3 relative inline-block">
                     Our Products
-                    <div class="absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-[2px] bg-[#a30000]"></div>
+                    <!-- <div class="absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-[2px] bg-[#a30000]"></div> -->
                 </h2>
                 <p class="text-sm sm:text-base text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto px-4">Discover our premium collection of kitchen products, crafted with precision and designed for modern living.</p>
             </div>
@@ -617,7 +617,7 @@
             </div>
 
             <!-- Details Grid -->
-            <div class="details-grid grid md:grid-cols-2 gap-5 mt-20">
+            <div class="details-grid grid md:grid-cols-2 gap-5 mt-5">
                 <!-- Detail Card 1 -->
                 <div class="detail-card">
                     <h3 class="detail-title">
@@ -674,47 +674,119 @@
     </section>
 
     <!-- Contact Section -->
-    <div class="container-custom py-16">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div>
-                <form class="space-y-4">
-                    <div>
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-input">
-                    </div>
-                    <div>
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-input">
-                    </div>
-                    <div>
-                        <label class="form-label">Message</label>
-                        <textarea class="form-textarea" rows="4"></textarea>
-                    </div>
-                    <button class="btn btn-lg">
-                        Send Message
-                    </button>
-                </form>
+    <section class="contact-section py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-10">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="section-title-2 text-3xl md:text-4xl font-[600] mb-3 relative inline-block">
+                    Get In Touch
+                    <!-- <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-[2px] bg-[#a30000]"></div> -->
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto px-4">Have questions about our products or services? We're here to help. Send us a message and we'll respond as soon as possible.</p>
             </div>
-            <div class="contact-info">
-                <h3 class="footer-title">Get in Touch</h3>
-                <div class="space-y-4">
-                    <p class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        123 Kitchen Street, Design City
-                    </p>
-                    <p class="contact-item">
-                        <i class="fas fa-phone contact-icon"></i>
-                        +1 234 567 890
-                    </p>
-                    <p class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        info@simlinekitchen.com
-                    </p>
+
+            <div class="grid md:grid-cols-7 gap-12">
+                <!-- Contact Form -->
+                <div class="md:col-span-4 bg-white rounded-lg shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
+                    <form class="grid grid-cols-2 gap-x-8 gap-y-3">
+                        <div class="form-group relative col-span-2 sm:col-span-1">
+                            <input type="text" id="name" class="form-input peer" placeholder=" " required>
+                            <label for="name" class="form-label absolute left-0 top-0 px-4 py-3 text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your Name</label>
+                            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300"></div>
+                        </div>
+
+                        <div class="form-group relative col-span-2 sm:col-span-1">
+                            <input type="email" id="email" class="form-input peer" placeholder=" " required>
+                            <label for="email" class="form-label absolute left-0 top-0 px-4 py-3 text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your Email</label>
+                            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300"></div>
+                        </div>
+
+                        <div class="form-group relative col-span-2">
+                            <input type="tel" id="phone" class="form-input peer" placeholder=" " required>
+                            <label for="phone" class="form-label absolute left-0 top-0 px-4 py-3 text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Phone Number</label>
+                            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300"></div>
+                        </div>
+
+                        <div class="form-group relative col-span-2">
+                            <textarea id="message" rows="4" class="form-textarea peer resize-none" placeholder=" " required></textarea>
+                            <label for="message" class="form-label absolute left-0 top-0 px-4 py-3 text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your Message</label>
+                            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300"></div>
+                        </div>
+                        <div class="col-span-2 flex justify-center">
+                            <button type="submit" class=" btn btn-lg w-full bg-[#a30000] text-white py-3 px-6 rounded-md hover:bg-[#800000] transition-colors duration-300 transform flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="md:col-span-3 space-y-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 relative">
+                            Contact Information
+                            <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#a30000]"></div>
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 group">
+                                <div class="min-w-12 min-h-12 rounded-full bg-[#a30000]/10 flex items-center justify-center group-hover:bg-[#a30000] transition-colors duration-300">
+                                    <i class="fas fa-map-marker-alt text-[#a30000] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium mb-1">Our Location</h4>
+                                    <p class="text-gray-600 text-sm">Slimline (a Product Of Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana, India</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 group">
+                                <div class="min-w-12 min-h-12 rounded-full bg-[#a30000]/10 flex items-center justify-center group-hover:bg-[#a30000] transition-colors duration-300">
+                                    <i class="fas fa-phone text-[#a30000] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium mb-1">Phone Number</h4>
+                                    <a href="tel:+919650100908" class="text-gray-600 text-sm hover:text-[#a30000] transition-colors duration-300">+91-9650100908</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 group">
+                                <div class="min-w-12 min-h-12 rounded-full bg-[#a30000]/10 flex items-center justify-center group-hover:bg-[#a30000] transition-colors duration-300">
+                                    <i class="fas fa-envelope text-[#a30000] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium mb-1">Email Address</h4>
+                                    <a href="mailto:info@slimlinekitchens.com" class="text-gray-600 text-sm hover:text-[#a30000] transition-colors duration-300">info@slimlinekitchens.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 relative">
+                            Business Hours
+                            <div class="absolute -bottom-2 left-0 w-12 h-0.5 bg-[#a30000]"></div>
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="text-gray-800 font-medium">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="text-gray-800 font-medium">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="text-gray-800 font-medium">Closed</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer bg-black text-gray-300 py-16 md:py-20 relative overflow-hidden">
