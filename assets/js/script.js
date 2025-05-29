@@ -11,6 +11,10 @@ class HeroSlider {
     this.autoPlayDelay = 5000;
     this.isTransitioning = false;
 
+    // Set first slide as active when page loads
+    this.items[0].classList.add('active');
+    this.dots[0].classList.add('active');
+
     this.init();
   }
 
@@ -231,5 +235,38 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach((counter) => {
     const target = parseInt(counter.getAttribute("data-target"));
     new Counter(counter, target);
+  });
+});
+
+
+// Initialize Owl Carousel for Testimonials
+$(document).ready(function () {
+  $('.testimonial-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      smartSpeed: 1000,
+      navText: [
+          '<i class="fas fa-chevron-left"></i>',
+          '<i class="fas fa-chevron-right"></i>'
+      ],
+      responsive: {
+          0: {
+              items: 1,
+              margin: 5
+          },
+          768: {
+              items: 2,
+              margin: 15
+          },
+          1280: {
+              items: 3,
+              margin: 20
+          }
+      }
   });
 });
