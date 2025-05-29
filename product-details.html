@@ -188,7 +188,7 @@
         </div>
     </div>
 
-    <!-- Search Overlay - Placeholder, copy from index.html or about-us.html -->
+    <!-- Search Overlay -->
     <div id="searchOverlay" class="search-overlay">
         <div class="search-container">
             <div class="search-header">
@@ -218,94 +218,170 @@
         </div>
     </div>
 
-
     <!-- Product Details Section -->
-    <section class="product-details-section py-16 md:py-24 bg-white">
+    <section class="product-details-section py-20">
         <div class="container mx-auto px-6 md:px-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <!-- Product Image Gallery (Simple display for now) -->
-                <div class="product-image-gallery lg:sticky lg:top-8">
-                    <img src="assets/images/products/bottle-basket.jpg" alt="Bottle Basket" class="w-full rounded-lg shadow-xl border border-gray-200">
-                    <!-- Add space for thumbnail gallery if needed later -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Left Column: Image Gallery -->
+                <div class="product-image-gallery sticky top-10">
+                    <div>
+                        <!-- Main Image -->
+                        <div class="main-image mb-4 relative">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Basic hooded sweatshirt in pink" class="w-full h-auto rounded-lg">
+                            <!-- Image navigation arrows (optional) -->
+                            <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow opacity-75 hover:opacity-100 transition"><i class="fas fa-chevron-left text-gray-700"></i></button>
+                            <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow opacity-75 hover:opacity-100 transition"><i class="fas fa-chevron-right text-gray-700"></i></button>
+                        </div>
+                        <!-- Thumbnail Images -->
+                        <div class="thumbnail-images flex gap-3 overflow-x-auto">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 1" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 2" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 3" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 4" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 5" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Product Information -->
+                <!-- Right Column: Product Information -->
                 <div class="product-info">
-                    <h1 class="product-title text-4xl md:text-5xl font-bold text-gray-800 mb-4 syne-font">Bottle Basket</h1>
+                    <h1 class="product-title text-2xl md:text-3xl font-semibold text-gray-800 mb-2">BOTTLE BASKET</h1>
                     
-                    <p class="product-short-description text-lg text-gray-600 mb-8 leading-relaxed">
-                        An essential kitchen accessory for organized bottle storage, crafted with durable stainless steel and a sleek nickel chrome finish.
-                    </p>
-
-                    <!-- Specifications -->
-                    <div class="product-specs mb-8 p-6 bg-gray-100 rounded-lg">
-                        <h3 class="text-2xl font-semibold text-[#a30000] mb-4 syne-font">Key Specifications</h3>
-                        <ul class="list-none space-y-3 text-gray-700 text-base">
-                            <li class="flex items-center"><i class="ri-arrow-right-s-line text-[#a30000] mr-2 text-xl"></i><strong>Cabinet Width (in mm):</strong> 450/500/600/700/800/900</li>
-                            <li class="flex items-center"><i class="ri-arrow-right-s-line text-[#a30000] mr-2 text-xl"></i><strong>Compatibility:</strong> Telescopic Slides</li>
-                            <li class="flex items-center"><i class="ri-arrow-right-s-line text-[#a30000] mr-2 text-xl"></i><strong>Loading Capacity:</strong> 25 Kgs</li>
-                            <li class="flex items-center"><i class="ri-arrow-right-s-line text-[#a30000] mr-2 text-xl"></i><strong>Material:</strong> Annealed Stainless Steel</li>
-                            <li class="flex items-center"><i class="ri-arrow-right-s-line text-[#a30000] mr-2 text-xl"></i><strong>Finish:</strong> Nickel Chrome</li>
-                        </ul>
+                    <!-- Price and Rating -->
+                    <div class="flex items-center mb-4">
+                        <div class="price text-xl font-bold text-red-600 mr-2">$15.50</div>
+                        <div class="original-price text-gray-500 line-through mr-2">$31.00</div>
+                        <div class="discount text-red-600 font-semibold">-50%</div>
+                        <div class="ml-auto flex items-center">
+                            <div class="rating text-yellow-500 text-sm mr-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="reviews text-gray-600 text-sm">12 reviews</div>
+                        </div>
                     </div>
 
-                    <!-- Dimensions Table (Uncomment and refine if needed) -->
-                    <div class="product-dimensions mb-8 p-6 bg-gray-100 rounded-lg">
-                         <h4 class="text-2xl font-semibold text-[#a30000] mb-4 syne-font">Available Sizes (in cm)</h4>
-                         <div class="overflow-x-auto">
-                         <table class="table-auto w-full text-left text-gray-700 border-collapse">
-                             <thead>
-                                 <tr class="bg-gray-200">
-                                     <th class="px-4 py-3 border border-gray-300">Width</th>
-                                     <th class="px-4 py-3 border border-gray-300">Depth</th>
-                                     <th class="px-4 py-3 border border-gray-300">Height</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                                 <tr>
-                                     <td class="border border-gray-300 px-4 py-3">15</td>
-                                     <td class="border border-gray-300 px-4 py-3">20</td>
-                                     <td class="border border-gray-300 px-4 py-3">6</td>
-                                 </tr>
-                                 <tr>
-                                     <td class="border border-gray-300 px-4 py-3">17</td>
-                                     <td class="border border-gray-300 px-4 py-3">20</td>
-                                     <td class="border border-gray-300 px-4 py-3">6</td>
-                                 </tr>
-                                 <tr>
-                                     <td class="border border-gray-300 px-4 py-3">19</td>
-                                     <td class="border border-gray-300 px-4 py-3">20</td>
-                                     <td class="border border-gray-300 px-4 py-3">6</td>
-                                 </tr>
-                                 <tr>
-                                     <td class="border border-gray-300 px-4 py-3">21</td>
-                                     <td class="border border-gray-300 px-4 py-3">20</td>
-                                     <td class="border border-gray-300 px-4 py-3">6</td>
-                                 </tr>
-                             </tbody>
-                         </table>
+                    <!-- Bottle Basket Specifications (Added) -->
+                    <div class="product-specs text-gray-700 text-base leading-relaxed mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Specifications</h3>
+                        <p><strong>Cabinet Width (in mm):</strong> 450/500/600/700/800/900</p>
+                        <p><strong>Compatible With:</strong> Telescopic Slides</p>
+                        <p><strong>Loading Capacity:</strong> 25 Kgs</p>
+                        <p><strong>Material:</strong> Annealed Stainless Steel</p>
+                        <p><strong>Finish:</strong> Nickel Chrome</p>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="size-selection mb-6 hidden">
+                        <div class="text-sm text-gray-700 mb-1">Size:</div>
+                         <div class="flex items-center gap-4">
+                             <select class="border rounded-md px-3 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                 <option>Please select</option>
+                             </select>
+                             <a href="#" class="text-blue-600 text-sm flex items-center"><i class="fas fa-ruler-combined mr-1"></i> Size chart</a>
                          </div>
-                     </div>
-
-                    <!-- Full Product Description -->
-                     <div class="product-full-description mt-8">
-                        <h3 class="text-2xl font-semibold text-[#a30000] mb-4 syne-font">Product Overview</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            The Bottle Basket is a premium kitchen solution designed to maximize storage efficiency and accessibility for your bottles. Constructed from high-quality annealed stainless steel with a durable Nickel Chrome finish, it offers exceptional longevity and resistance to rust and corrosion. Compatible with modern telescopic slides, this basket ensures smooth and effortless pull-out action, allowing easy access to items stored deep within your cabinets. With a robust loading capacity of 25 Kgs, it can safely store multiple bottles of various sizes. Its versatile design makes it suitable for cabinet widths ranging from 450mm to 900mm, providing flexible storage options for different kitchen layouts. Enhance your kitchen organization with this stylish and functional bottle basket.
-                        </p>
                     </div>
 
-                    <!-- Call to Action Buttons -->
-                    <div class="flex gap-4 mt-10">
-                        <a href="#" class="cta-button cta-button-primary">Inquire Now</a>
-                        <a href="#" class="cta-button cta-button-secondary">View Brochure</a>
+                    <!-- Quantity and Buttons -->
+                    <div class="flex items-center gap-4 mb-6 hidden">
+                        <div class="quantity-selector flex items-center border rounded-md">
+                             <button class="px-3 py-2 border-r text-gray-700 hover:bg-gray-100">-</button>
+                             <input type="text" value="1" class="w-10 text-center outline-none">
+                             <button class="px-3 py-2 border-l text-gray-700 hover:bg-gray-100">+</button>
+                        </div>
+                        <button class="flex-1 bg-teal-700 text-white px-4 py-2 rounded-md hover:bg-teal-800 transition"><i class="fas fa-shopping-cart mr-2"></i> Add to cart</button>
+                        <button class="border border-gray-400 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 transition"><i class="far fa-heart mr-2"></i> Favourite</button>
+                    </div>
+
+                    <!-- Delivery Information -->
+                    <div class="delivery-info mb-6 border-t border-b border-gray-200 py-4">
+                        <div class="text-sm font-semibold text-gray-800 mb-2">Delivery</div>
+                        <p class="text-gray-600 text-sm mb-3">Free standard shipping on orders over $35 before tax, plus free returns.</p>
+                        <table class="table-auto w-full text-left text-gray-600 text-sm">
+                            <thead>
+                                <tr>
+                                    <th class="pb-1">TYPE</th>
+                                    <th class="pb-1">HOW LONG</th>
+                                    <th class="pb-1 text-right">HOW MUCH</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-1">Standard delivery</td>
+                                    <td class="py-1">1-4 business days</td>
+                                    <td class="py-1 text-right">$4.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">Express delivery</td>
+                                    <td class="py-1">1 business day</td>
+                                    <td class="py-1 text-right">$10.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-1">Pick up in store</td>
+                                    <td class="py-1">1-2 business days</td>
+                                    <td class="py-1 text-right">Free</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Return Information -->
+                    <div class="return-info mb-6">
+                        <div class="text-sm font-semibold text-gray-800 mb-2">Return</div>
+                         <p class="text-gray-600 text-sm mb-3">You have <span class="font-semibold">60 days</span> to return the item(s) using any of the following methods:</p>
+                         <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                             <li>Free store return</li>
+                             <li>Free returns via USPS Dropoff Service</li>
+                         </ul>
+                    </div>
+
+                    <!-- Bottle Basket Dimensions Table (Added) -->
+                     <div class="product-dimensions mt-6">
+                          <h4 class="text-xl font-semibold text-gray-800 mb-2">Available Sizes (in cm)</h4>
+                          <table class="w-full text-left text-gray-700 border-collapse">
+                              <thead>
+                                  <tr class="bg-gray-200">
+                                      <th class="px-4 py-2 border border-gray-300">Width</th>
+                                      <th class="px-4 py-2 border border-gray-300">Depth</th>
+                                      <th class="px-4 py-2 border border-gray-300">Height</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td class="border border-gray-300 px-4 py-2">15</td>
+                                      <td class="border border-gray-300 px-4 py-2">20</td>
+                                      <td class="border border-gray-300 px-4 py-2">6</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="border border-gray-300 px-4 py-2">17</td>
+                                      <td class="border border-gray-300 px-4 py-2">20</td>
+                                      <td class="border border-gray-300 px-4 py-2">6</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="border border-gray-300 px-4 py-2">19</td>
+                                      <td class="border border-gray-300 px-4 py-2">20</td>
+                                      <td class="border border-gray-300 px-4 py-2">6</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="border border-gray-300 px-4 py-2">21</td>
+                                      <td class="border border-gray-300 px-4 py-2">20</td>
+                                      <td class="border border-gray-300 px-4 py-2">6</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                    <!-- Share Links -->
+                    <div class="share-links flex items-center gap-3 text-sm text-gray-800">
+                        Share:
+                        <a href="#" class="text-gray-500 hover:text-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-pinterest-p"></i></a>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Footer - Placeholder, copy from index.html or about-us.html -->
     <footer class="footer bg-gradient-to-b from-black to-gray-900 text-gray-300 py-16 md:py-20 relative overflow-hidden">
