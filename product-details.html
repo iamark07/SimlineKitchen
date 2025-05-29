@@ -14,6 +14,21 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/product-details.css"> <!-- Linking a new CSS for specific styles -->
     <title>Product Details - Simline Kitchen</title>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .product-image-gallery img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-image-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 overflow-x-hidden">
@@ -219,165 +234,212 @@
     </div>
 
     <!-- Product Details Section -->
-    <section class="product-details-section py-20">
+    <section class="product-details-section pt-12 md:pt-16 pb-24 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6 md:px-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                <!-- Left Column: Image Gallery -->
-                <div class="product-image-gallery sticky top-10">
-                    <div>
-                        <!-- Main Image -->
-                        <div class="main-image mb-4 relative">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Basic hooded sweatshirt in pink" class="w-full h-auto rounded-lg">
-                            <!-- Image navigation arrows (optional) -->
-                            <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow opacity-75 hover:opacity-100 transition"><i class="fas fa-chevron-left text-gray-700"></i></button>
-                            <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow opacity-75 hover:opacity-100 transition"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-10 xl:gap-12 relative">
+                <!-- Left Column: Enhanced Image Gallery -->
+                <div class="product-image-gallery lg:sticky lg:top-[152.667px] h-fit">
+                    <div class="transform transition-transform duration-300">
+                        <!-- Main Image with Zoom Effect -->
+                        <div class="main-image mb-6 relative group overflow-hidden">
+                            <img src="assets/images/slider/slider-1.jpg" alt="Basic hooded sweatshirt in pink" 
+                                 class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110">
+                            <!-- Enhanced Image Navigation -->
+                            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
+                                <i class="fas fa-chevron-left text-gray-800 text-lg"></i>
+                            </button>
+                            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
+                                <i class="fas fa-chevron-right text-gray-800 text-lg"></i>
+                            </button>
+                            <!-- Zoom Indicator -->
+                            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus mr-1"></i> Click to zoom
+                            </div>
                         </div>
-                        <!-- Thumbnail Images -->
-                        <div class="thumbnail-images flex gap-3 overflow-x-auto">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 1" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 2" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 3" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 4" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 5" class="w-20 h-auto rounded-md border cursor-pointer hover:border-gray-500">
+                        <!-- Enhanced Thumbnail Gallery -->
+                        <div class="thumbnail-images flex gap-4 overflow-x-auto scrollbar-hide">
+                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
+                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 1" 
+                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
+                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
+                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 2" 
+                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
+                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
+                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 3" 
+                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
+                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
+                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 4" 
+                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
+                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
+                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 5" 
+                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
+                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Product Information -->
+                <!-- Right Column: Enhanced Product Information -->
                 <div class="product-info">
-                    <h1 class="product-title text-2xl md:text-3xl font-semibold text-gray-800 mb-2">BOTTLE BASKET</h1>
-                    
-                    <!-- Price and Rating -->
-                    <div class="flex items-center mb-4">
-                        <div class="price text-xl font-bold text-red-600 mr-2">$15.50</div>
-                        <div class="original-price text-gray-500 line-through mr-2">$31.00</div>
-                        <div class="discount text-red-600 font-semibold">-50%</div>
-                        <div class="ml-auto flex items-center">
-                            <div class="rating text-yellow-500 text-sm mr-1">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <!-- Brand and Title Section -->
+                    <div class="mb-7">
+                        <span class="text-teal-600 font-medium tracking-wider text-sm uppercase mb-2 block syne-font">Premium Collection</span>
+                        <h1 class="product-title text-2xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight syne-font">BOTTLE BASKET</h1>
+                        <div class="flex items-center gap-2">
+                            <div class="rating flex items-center">
+                                <div class="text-yellow-400 flex gap-0.5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="ml-2 text-gray-600 text-sm">4.8 (12 reviews)</span>
                             </div>
-                            <div class="reviews text-gray-600 text-sm">12 reviews</div>
+                            <span class="text-gray-300">|</span>
+                            <span class="text-green-600 text-sm font-medium flex items-center">
+                                <i class="fas fa-check-circle mr-1"></i> In Stock
+                            </span>
                         </div>
                     </div>
 
-                    <!-- Bottle Basket Specifications (Added) -->
-                    <div class="product-specs text-gray-700 text-base leading-relaxed mb-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Specifications</h3>
-                        <p><strong>Cabinet Width (in mm):</strong> 450/500/600/700/800/900</p>
-                        <p><strong>Compatible With:</strong> Telescopic Slides</p>
-                        <p><strong>Loading Capacity:</strong> 25 Kgs</p>
-                        <p><strong>Material:</strong> Annealed Stainless Steel</p>
-                        <p><strong>Finish:</strong> Nickel Chrome</p>
-                    </div>
-
-                    <!-- Size Selection -->
-                    <div class="size-selection mb-6 hidden">
-                        <div class="text-sm text-gray-700 mb-1">Size:</div>
-                         <div class="flex items-center gap-4">
-                             <select class="border rounded-md px-3 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                                 <option>Please select</option>
-                             </select>
-                             <a href="#" class="text-blue-600 text-sm flex items-center"><i class="fas fa-ruler-combined mr-1"></i> Size chart</a>
-                         </div>
-                    </div>
-
-                    <!-- Quantity and Buttons -->
-                    <div class="flex items-center gap-4 mb-6 hidden">
-                        <div class="quantity-selector flex items-center border rounded-md">
-                             <button class="px-3 py-2 border-r text-gray-700 hover:bg-gray-100">-</button>
-                             <input type="text" value="1" class="w-10 text-center outline-none">
-                             <button class="px-3 py-2 border-l text-gray-700 hover:bg-gray-100">+</button>
+                    <!-- Enhanced Price Section -->
+                    <div class="price-section mb-8 bg-gray-50 rounded-xl">
+                        <div class="flex items-baseline gap-3">
+                            <div class="current-price text-3xl font-semibold text-gray-900">$15.50</div>
+                            <div class="original-price text-lg text-gray-500 line-through">$31.00</div>
+                            <div class="discount-badge bg-[#ffdfdf] text-[#a30000] px-2.5 py-1 rounded-full text-sm font-[500]">-50% OFF</div>
                         </div>
-                        <button class="flex-1 bg-teal-700 text-white px-4 py-2 rounded-md hover:bg-teal-800 transition"><i class="fas fa-shopping-cart mr-2"></i> Add to cart</button>
-                        <button class="border border-gray-400 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 transition"><i class="far fa-heart mr-2"></i> Favourite</button>
+                        <p class="text-green-600 text-sm mt-2 flex items-center">
+                            <i class="fas fa-tag mr-1"></i> Limited time offer - Ends soon
+                        </p>
                     </div>
 
-                    <!-- Delivery Information -->
-                    <div class="delivery-info mb-6 border-t border-b border-gray-200 py-4">
-                        <div class="text-sm font-semibold text-gray-800 mb-2">Delivery</div>
-                        <p class="text-gray-600 text-sm mb-3">Free standard shipping on orders over $35 before tax, plus free returns.</p>
-                        <table class="table-auto w-full text-left text-gray-600 text-sm">
-                            <thead>
-                                <tr>
-                                    <th class="pb-1">TYPE</th>
-                                    <th class="pb-1">HOW LONG</th>
-                                    <th class="pb-1 text-right">HOW MUCH</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="py-1">Standard delivery</td>
-                                    <td class="py-1">1-4 business days</td>
-                                    <td class="py-1 text-right">$4.99</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-1">Express delivery</td>
-                                    <td class="py-1">1 business day</td>
-                                    <td class="py-1 text-right">$10.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-1">Pick up in store</td>
-                                    <td class="py-1">1-2 business days</td>
-                                    <td class="py-1 text-right">Free</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!-- Enhanced Specifications -->
+                    <div class="product-specs mb-8">
+                        <h3 class="sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-teal-600"></i> Specifications
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
+                                <span class="text-gray-800 text-sm block font-[500]">Cabinet Width</span>
+                                <span class="text-gray-900 font-[300] text-xs">450/500/600/700/800/900 mm</span>
+                            </div>
+                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
+                                <span class="text-gray-800 text-sm block font-[500]">Compatible With</span>
+                                <span class="text-gray-900 font-[300] text-xs">Telescopic Slides</span>
+                            </div>
+                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
+                                <span class="text-gray-800 text-sm block font-[500]">Loading Capacity</span>
+                                <span class="text-gray-900 font-[300] text-xs">25 Kgs</span>
+                            </div>
+                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
+                                <span class="text-gray-800 text-sm block font-[500]">Material</span>
+                                <span class="text-gray-900 font-[300] text-xs">Annealed Stainless Steel</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Return Information -->
-                    <div class="return-info mb-6">
-                        <div class="text-sm font-semibold text-gray-800 mb-2">Return</div>
-                         <p class="text-gray-600 text-sm mb-3">You have <span class="font-semibold">60 days</span> to return the item(s) using any of the following methods:</p>
-                         <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
-                             <li>Free store return</li>
-                             <li>Free returns via USPS Dropoff Service</li>
-                         </ul>
+                    <!-- Action Buttons -->
+                    <div class="action-buttons space-y-4 mb-8 hidden">
+                        <div class="quantity-selector flex items-center gap-4">
+                            <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden">
+                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" value="1" min="1" 
+                                       class="w-16 text-center border-x border-gray-200 py-2 focus:outline-none">
+                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <button class="flex-1 bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg shadow-teal-600/20">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                        <button class="w-full border-2 border-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <i class="far fa-heart"></i>
+                            Add to Wishlist
+                        </button>
                     </div>
 
-                    <!-- Bottle Basket Dimensions Table (Added) -->
-                     <div class="product-dimensions mt-6">
-                          <h4 class="text-xl font-semibold text-gray-800 mb-2">Available Sizes (in cm)</h4>
-                          <table class="w-full text-left text-gray-700 border-collapse">
-                              <thead>
-                                  <tr class="bg-gray-200">
-                                      <th class="px-4 py-2 border border-gray-300">Width</th>
-                                      <th class="px-4 py-2 border border-gray-300">Depth</th>
-                                      <th class="px-4 py-2 border border-gray-300">Height</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td class="border border-gray-300 px-4 py-2">15</td>
-                                      <td class="border border-gray-300 px-4 py-2">20</td>
-                                      <td class="border border-gray-300 px-4 py-2">6</td>
-                                  </tr>
-                                  <tr>
-                                      <td class="border border-gray-300 px-4 py-2">17</td>
-                                      <td class="border border-gray-300 px-4 py-2">20</td>
-                                      <td class="border border-gray-300 px-4 py-2">6</td>
-                                  </tr>
-                                  <tr>
-                                      <td class="border border-gray-300 px-4 py-2">19</td>
-                                      <td class="border border-gray-300 px-4 py-2">20</td>
-                                      <td class="border border-gray-300 px-4 py-2">6</td>
-                                  </tr>
-                                  <tr>
-                                      <td class="border border-gray-300 px-4 py-2">21</td>
-                                      <td class="border border-gray-300 px-4 py-2">20</td>
-                                      <td class="border border-gray-300 px-4 py-2">6</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-
-                    <!-- Share Links -->
-                    <div class="share-links flex items-center gap-3 text-sm text-gray-800">
-                        Share:
-                        <a href="#" class="text-gray-500 hover:text-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-pinterest-p"></i></a>
+                    <!-- Enhanced Delivery Information -->
+                    <div class="delivery-info mb-8 hidden">
+                        <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-xl">
+                            <div class="text-blue-600 text-xl">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Free Delivery</h4>
+                                <p class="text-gray-600 text-sm">Free standard shipping on orders over $35</p>
+                                <div class="mt-2 text-sm">
+                                    <span class="text-gray-900 font-medium">Estimated delivery:</span>
+                                    <span class="text-gray-600">2-4 business days</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Trust Badges -->
+                    <div class="trust-badges flex flex-wrap sm:grid sm:grid-cols-3 gap-4 text-center justify-center sm:justify-start">
+                        <div class="trust-item p-3">
+                            <i class="fas fa-shield-alt text-teal-600 text-xl mb-2"></i>
+                            <p class="text-sm text-gray-600">Secure Payment</p>
+                        </div>
+                        <div class="trust-item p-3">
+                            <i class="fas fa-undo text-teal-600 text-xl mb-2"></i>
+                            <p class="text-sm text-gray-600">Easy Returns</p>
+                        </div>
+                        <div class="trust-item p-3">
+                            <i class="fas fa-headset text-teal-600 text-xl mb-2"></i>
+                            <p class="text-sm text-gray-600">24/7 Support</p>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Dimensions Table -->
+                    <div class="product-dimensions mt-8">
+                        <h4 class="sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-ruler-combined mr-2 text-teal-600"></i> Available Sizes
+                        </h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-[#f6f6f6]">
+                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Width (cm)</th>
+                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Depth (cm)</th>
+                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Height (cm)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">15</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">17</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">19</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">21</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
+                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

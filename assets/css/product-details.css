@@ -30,7 +30,6 @@
 /* Styling for Bottle Basket Dimensions Table */
 .product-info .product-dimensions {
     margin-top: 1.5rem; /* Space above table */
-    margin-bottom: 1.5rem; /* Space below table */
 }
 
 .product-info .product-dimensions h4 {
@@ -49,14 +48,14 @@
 .product-info .product-dimensions td {
     border: 1px solid #ddd; /* Light gray border */
     padding: 10px; /* Padding */
-    text-align: left;
-    font-size: 0.9rem;
+    text-align: center;
 }
 
 .product-info .product-dimensions th {
     background-color: #f2f2f2; /* Light gray background for header */
     color: #333; /* Dark text */
-    font-weight: 600;
+    font-weight: 500;
+    
 }
 
 .product-info .product-dimensions tr:nth-child(even) {
@@ -68,6 +67,13 @@
 }
 
 /* Responsive Adjustments (optional - Tailwind handles much of this) */
-@media (max-width: 1023px) {
+@media (max-width: 640px) {
+    .product-info .product-specs h3 {
+        font-size: 17px; /* Heading size */
 
+    }
+
+    .product-info .product-dimensions h4 {
+        font-size: 17px; /* Heading size */
+    }
 }
