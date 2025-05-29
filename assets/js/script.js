@@ -199,15 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial display: show all products
     filterProducts('all');
-
-    // Handle click on "View Details" buttons (do nothing for now)
-    const viewDetailsBtns = document.querySelectorAll('.btn-view-details');
-    viewDetailsBtns.forEach(btn => {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default button behavior
-            // No action is taken for now as per requirement
-        });
-    });
 });
 
 // Add fade-in animation keyframes
