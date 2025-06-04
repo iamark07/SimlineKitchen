@@ -108,7 +108,6 @@
                                 <a href="#" class="dropdown-item">Slimline 304</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-link">Services</a>
                         <a href="#" class="nav-link">Contact</a>
                     </nav>
                     <div class="flex gap-5">
@@ -142,46 +141,58 @@
             <nav class="mobile-nav text-nowrap uppercase syne-font">
                 <a href="index.html" class="mobile-nav-link">Home</a>
                 <a href="about-us.html" class="mobile-nav-link">About</a>
-                <div class="nav-dropdown">
-                    <a class="mobile-nav-link uppercase syne-font hover:!px-[8px]">
-                        Products
-                        <i class="fas fa-chevron-down ml-2"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <!-- Level 1 Dropdown Item with Nested Dropdown -->
-                        <div class="dropdown-item-nested">
-                            <button class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
-                                Kitchen Accessories
-                                <i class="fas fa-chevron-right text-xs ml-2"></i>
-                            </button>
-                            <!-- Level 2 Dropdown Menu -->
-                            <div class="dropdown-menu-nested uppercase syne-font">
-                                <a href="#" class="dropdown-item">Cabinet Hinges</a>
-                                <a href="#" class="dropdown-item">Tandem Box</a>
-                                <!-- Level 2 Dropdown Item with Nested Dropdown -->
-                                <div class="dropdown-item-nested">
-                                    <button
-                                        class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
-                                        Pullout Solutions
-                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
-                                    </button>
-                                    <!-- Level 3 Dropdown Menu -->
-                                    <div class="dropdown-menu-nested sub-dropdown-menu-nested uppercase syne-font">
-                                        <a href="#" class="dropdown-item">SS Pullouts</a>
-                                        <a href="#" class="dropdown-item">Wire Baskets</a>
-                                        <a href="#" class="dropdown-item">Other Pullouts</a>
-                                    </div>
+                <div class="mobile-nav-dropdown">
+                    <button
+                        class="mobile-nav-link w-full flex items-center justify-between mobile-dropdown-toggle hover:!px-[10px]">
+                        <span>Products</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden">
+                        <ul class="py-1">
+                            <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                            <li class="mobile-dropdown-item-nested">
+                                <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                    <span>For Life</span>
+                                    <i class="fas fa-chevron-right text-xs"></i>
+                                </button>
+                                <!-- Level 2 Dropdown Menu -->
+                                <div class="mobile-dropdown-menu-nested hidden">
+                                    <ul class="py-1">
+                                        <li><a href="#" class="mobile-dropdown-link">MULTIUSE BASKETS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">EASY PULLOUTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">LARGE ORGANISERS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">RAILING SYSTEMS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">CORNER SOLUTIONS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">KITCHEN DELIGHTS</a></li>
+                                        <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                        <li class="mobile-dropdown-item-nested">
+                                            <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                                <span>Pullout Solutions</span>
+                                                <i class="fas fa-chevron-right text-xs"></i>
+                                            </button>
+                                            <!-- Level 3 Dropdown Menu -->
+                                            <div class="mobile-dropdown-menu-nested mobile-dropdown-submenu-nested hidden">
+                                                <ul class="py-1">
+                                                    <li><a href="#" class="mobile-dropdown-link">SS Pullouts</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Wire Baskets</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Other Pullouts</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" class="mobile-dropdown-link">ABOVE & BELOW SINK</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">POLE SYSTEM</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">WARDROBE DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">BATHROOM DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">ALLIEDS</a></li>
+                                    </ul>
                                 </div>
-                                <a href="#" class="dropdown-item">Rolling Shutters</a>
-                            </div>
-                        </div>
-                        <!-- Level 1 Dropdown Item -->
-                        <a href="#" class="dropdown-item">Wardrobe Accessories</a>
-                        <!-- Level 1 Dropdown Item -->
-                        <a href="#" class="dropdown-item">Bathroom Fittings</a>
+                            </li>
+                            <!-- Level 1 Dropdown Items -->
+                            <li><a href="#" class="mobile-dropdown-link">KRYSTA</a></li>
+                            <li><a href="#" class="mobile-dropdown-link">Slimline 304</a></li>
+                        </ul>
                     </div>
                 </div>
-                <a href="#" class="mobile-nav-link">Services</a>
                 <a href="#" class="mobile-nav-link">Contact</a>
             </nav>
         </div>
@@ -216,9 +227,9 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Hero Section -->
-    <section class="about-hero">
+    <section class="about-hero hidden">
         <div class="absolute inset-0">
             <img src="assets/images/slider/slider-1.jpg" alt="About Us Hero" class="w-full h-full object-cover">
         </div>
@@ -239,75 +250,28 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section py-12 md:py-16">
-        <div class="container mx-auto px-6 md:px-10">
-            <div class="stats-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                <!-- stats 1 -->
-                <div class="stats-item flex items-center xl:justify-center gap-4">
-                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
-                        <i class="ri-user-heart-line text-5xl text-[100]"></i>
-                    </div>
-                    <div class="stats-text">
-                        <span class="counter" data-target="395">0</span>+
-                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Ongoing Projects</h3>
-                    </div>
-                </div>
-
-                <!-- stats 2 -->
-                <div class="stats-item flex items-center xl:justify-center gap-4">
-                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
-                        <i class="ri-building-line text-5xl text-[100]"></i>
-                    </div>
-                    <div class="stats-text">
-                        <span class="counter" data-target="689">0</span>+
-                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Bussiness Partner</h3>
-                    </div>
-                </div>
-
-                <!-- stats 3 -->
-                <div class="stats-item flex items-center xl:justify-center gap-4">
-                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
-                        <i class="ri-projector-line text-5xl text-[100]"></i>
-                    </div>
-                    <div class="stats-text">
-                        <span class="counter" data-target="580">0</span>+
-                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Projects Completed</h3>
-                    </div>
-                </div>
-
-                <!-- stats 4 -->
-                <div class="stats-item flex items-center xl:justify-center gap-4">
-                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
-                        <i class="ri-team-line text-5xl text-[100]"></i>
-                    </div>
-                    <div class="stats-text">
-                        <span class="counter" data-target="4599">0</span>+
-                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Clients Register</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Our Story Section -->
     <section id="our-story" class="our-story section-padding">
         <div class="container mx-auto px-6 md:px-10 py-20">
+            <!-- Section Header -->
+            <div class="text-center mb-16 section-header">
+                <h2 class="section-title-2 text-3xl md:text-5xl font-[600] mb-3 relative inline-block">Our Story</h2>
+            </div>
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Image Section -->
                 <div class="story-image-wrapper">
-                    <img src="assets/images/slider/slider-2.jpg" alt="Our Story" class="w-full h-[500px] object-cover">
+                    <img src="assets/images/slider/slider-2.jpg" alt="Our Story" class="w-full h-[300px] sm:h-[500px] lg:h-full object-cover">
                 </div>
 
                 <!-- Content Section -->
                 <div class="">
                     <div class="story-badge section-badge">Since 2002</div>
-                    <h2 class="text-2xl md:text-3xl font-[600] text-[#a30000] relative my-4">Our Journey of Innovation</h2>
-                    <p class="text-gray-600 leading-relaxed mb-3">
+                    <h2 class="text-xl md:text-3xl font-[600] text-[#a30000] relative my-3">Our Journey of Innovation</h2>
+                    <p class="text-gray-600 leading-relaxed mb-3 text-sm md:text-base">
                         At Simline Kitchen, we've been transforming spaces and creating dream kitchens for over two decades. 
                         Our journey began with a simple vision: to bring luxury and functionality together in every kitchen we design.
                     </p>
-                    <p class="text-gray-600 leading-relaxed mb-5">
+                    <p class="text-gray-600 leading-relaxed mb-5 text-sm md:text-base">
                         Known widely for manufacturing, wholesaling and supplying a quality assured array of Kitchen and Wardrobe 
                         Accessories, we "Slimline (a Product Of Kitchens)" have established ourselves as a trusted name in the industry.
                     </p>
@@ -343,6 +307,57 @@
                                 <p class="text-gray-600">Expanded our reach across multiple states in India</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-12 md:py-16">
+        <div class="container mx-auto px-6 md:px-10">
+            <div class="stats-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- stats 1 -->
+                <div class="stats-item flex text-center xl:text-left flex-col xl:flex-row items-center xl:justify-center gap-4">
+                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-user-heart-line text-4xl text-[100]"></i>
+                    </div>
+                    <div class="stats-text">
+                        <span class="counter" data-target="395">0</span><span>+</span>
+                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Ongoing Projects</h3>
+                    </div>
+                </div>
+
+                <!-- stats 2 -->
+                <div class="stats-item flex text-center xl:text-left flex-col xl:flex-row items-center xl:justify-center gap-4">
+                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-building-line text-4xl text-[100]"></i>
+                    </div>
+                    <div class="stats-text">
+                        <span class="counter" data-target="689">0</span><span>+</span>
+                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Bussiness Partner</h3>
+                    </div>
+                </div>
+
+                <!-- stats 3 -->
+                <div class="stats-item flex text-center xl:text-left flex-col xl:flex-row items-center xl:justify-center gap-4">
+                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-projector-line text-4xl text-[100]"></i>
+                    </div>
+                    <div class="stats-text">
+                        <span class="counter" data-target="580">0</span><span>+</span>
+                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Projects Completed</h3>
+                    </div>
+                </div>
+
+                <!-- stats 4 -->
+                <div class="stats-item flex text-center xl:text-left flex-col xl:flex-row items-center xl:justify-center gap-4">
+                    <div class="stats-icon flex-shrink-0 flex items-center justify-center">
+                        <i class="ri-team-line text-4xl text-[100]"></i>
+                    </div>
+                    <div class="stats-text">
+                        <span class="counter" data-target="4599">0</span><span>+</span>
+                        <h3 class="stats-title text-lg font-[500] text-black syne-font">Clients Register</h3>
                     </div>
                 </div>
             </div>
@@ -417,21 +432,41 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="cta-pattern"></div>
+        <div class="container mx-auto px-6 md:px-10">
+            <div class="cta-content">
+                <h2 class="cta-title text-3xl md:text-5xl font-[600] mb-3 relative inline-block syne-font">Ready to Transform Your Kitchen?</h2>
+                <p class="cta-description text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-4">Join thousands of satisfied customers who have trusted us with their kitchen transformations.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button cta-button-primary">
+                        Get Started
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="cta-button cta-button-secondary">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section class="team-section section-padding">
         <div class="container mx-auto px-6 md:px-10">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <h2 class="section-title">Meet Our Leadership</h2>
-                <p class="section-description">The passionate individuals driving our success and innovation</p>
+                <h2 class="section-title-2 text-3xl md:text-5xl font-[600] mb-3 relative inline-block">Meet Our Leadership</h2>
+                <p class="text-sm sm:text-base text-gray-600 mt-4 md:mt-6 max-w-2xl mx-auto px-4">The passionate individuals driving our success and innovation</p>
             </div>
 
             <!-- Team Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Team Member 1 -->
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="assets/images/slider/slider-1.jpg" alt="Team Member" class="w-full h-[400px] object-cover">
+                        <img src="assets/images/teams/team-3.jpg" alt="Team Member" class="w-full h-[300px] md:h-[400px] object-cover">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="#" class="social-link">
@@ -453,7 +488,7 @@
                 <!-- Team Member 2 -->
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="assets/images/slider/slider-2.jpg" alt="Team Member" class="w-full h-[400px] object-cover">
+                        <img src="assets/images/teams/team-2.jpg" alt="Team Member" class="w-full h-[300px] md:h-[400px] object-cover">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="#" class="social-link">
@@ -475,7 +510,7 @@
                 <!-- Team Member 3 -->
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="assets/images/slider/slider-3.jpg" alt="Team Member" class="w-full h-[400px] object-cover">
+                        <img src="assets/images/teams/team-1.jpg" alt="Team Member" class="w-full h-[300px] md:h-[400px] object-cover">
                         <div class="team-overlay">
                             <div class="team-social">
                                 <a href="#" class="social-link">
@@ -497,25 +532,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section section-padding">
-        <div class="cta-pattern"></div>
-        <div class="container mx-auto px-6 md:px-10">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Transform Your Kitchen?</h2>
-                <p class="cta-description">Join thousands of satisfied customers who have trusted us with their kitchen transformations.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="cta-button cta-button-primary">
-                        Get Started
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="cta-button cta-button-secondary">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="footer bg-gradient-to-b from-black to-gray-900 text-gray-300 py-16 md:py-20 relative overflow-hidden">

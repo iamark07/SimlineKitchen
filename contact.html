@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <title>Contact Us - Simline Kitchen</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Top Header -->
+    <div class="top-header hidden md:block">
+        <div class="container mx-auto px-6 md:px-10 py-2">
+            <div class="header-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <a href="mailto:info@slimlinekitchens.com" class="contact-link">
+                        <i class="fas fa-envelope icon-spacing"></i>
+                        <span class="text-sm">info@slimlinekitchens.com</span>
+                    </a>
+                    <a href="tel:+919650100908" class="contact-link">
+                        <i class="fas fa-phone icon-spacing"></i>
+                        <span class="text-sm">+91-9650100908</span>
+                    </a>
+                </div>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram transition-transform"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube transition-transform"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="main-header border-b border-[#f5f5f527]">
+        <div class="container mx-auto px-6 md:px-10 py-3">
+            <div class="nav-wrapper">
+                <div class="logo-container">
+                    <a href="index.html" class="logo"><img src="assets/images/simline-kitchen-logo-2.png"
+                            class="w-32 sm:w-48" alt=""></a>
+                </div>
+
+                <div class="flex gap-14">
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav uppercase syne-font">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about-us.html" class="nav-link">About</a>
+                        <div class="nav-dropdown">
+                            <button class="nav-link flex items-center gap-1 uppercase syne-font">
+                                Products
+                                <i class="fas fa-chevron-down text-xs transition-transform duration-300 ml-2"></i>
+                            </button>
+                            <div class="dropdown-menu text-xs">
+                                <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                                <div class="dropdown-item-nested text-nowrap">
+                                    <button
+                                        class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
+                                        For Life
+                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                    </button>
+                                    <!-- Level 2 Dropdown Menu -->
+                                    <div
+                                        class="dropdown-menu-nested dropdown-menu-nested-1 text-xs uppercase syne-font">
+                                        <a href="#" class="dropdown-item">MULTIUSE BASKETS</a>
+                                        <a href="#" class="dropdown-item">EASY PULLOUTS</a>
+                                        <a href="#" class="dropdown-item">LARGE ORGANISERS</a>
+                                        <a href="#" class="dropdown-item">RAILING SYSTEMS</a>
+                                        <a href="#" class="dropdown-item">CORNER SOLUTIONS</a>
+                                        <a href="#" class="dropdown-item">KITCHEN DELIGHTS</a>
+                                        <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                        <div class="dropdown-item-nested">
+                                            <button
+                                                class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
+                                                Pullout Solutions
+                                                <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                            </button>
+                                            <!-- Level 3 Dropdown Menu -->
+                                            <div class="dropdown-menu-nested sub-dropdown-menu-nested text-xs">
+                                                <a href="#" class="dropdown-item">SS Pullouts</a>
+                                                <a href="#" class="dropdown-item">Wire Baskets</a>
+                                                <a href="#" class="dropdown-item">Other Pullouts</a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="dropdown-item">ABOVE & BELOW SINK</a>
+                                        <a href="#" class="dropdown-item">POLE SYSTEM</a>
+                                        <a href="#" class="dropdown-item">WARDROBE DELIGHTS</a>
+                                        <a href="#" class="dropdown-item">BATHROOM DELIGHTS</a>
+                                        <a href="#" class="dropdown-item">ALLIEDS</a>
+
+                                    </div>
+                                </div>
+                                <!-- Level 1 Dropdown Item -->
+                                <a href="#" class="dropdown-item">KRYSTA</a>
+                                <!-- Level 1 Dropdown Item -->
+                                <a href="#" class="dropdown-item">Slimline 304</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-link">Contact</a>
+                    </nav>
+                    <div class="flex gap-5">
+                        <button id="searchToggle"
+                            class="group search-toggle w-[44px] h-[44px] md:w-10 md:h-10 bg-[#8a101045] rounded-full flex items-center justify-center">
+                            <i
+                                class="fas fa-search text-base text-[#a30000] group-hover:text-[#800000] transition-colors"></i>
+                        </button>
+                        <!-- Mobile Menu Button -->
+                        <button id="menuToggle" class="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="mobile-overlay"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h2 class="mobile-menu-title">Menu</h2>
+                <button id="closeMenu" class="close-menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav text-nowrap uppercase syne-font">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about-us.html" class="mobile-nav-link">About</a>
+                <div class="mobile-nav-dropdown">
+                    <button
+                        class="mobile-nav-link w-full flex items-center justify-between mobile-dropdown-toggle hover:!px-[10px]">
+                        <span>Products</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden">
+                        <ul class="py-1">
+                            <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                            <li class="mobile-dropdown-item-nested">
+                                <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                    <span>For Life</span>
+                                    <i class="fas fa-chevron-right text-xs"></i>
+                                </button>
+                                <!-- Level 2 Dropdown Menu -->
+                                <div class="mobile-dropdown-menu-nested hidden">
+                                    <ul class="py-1">
+                                        <li><a href="#" class="mobile-dropdown-link">MULTIUSE BASKETS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">EASY PULLOUTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">LARGE ORGANISERS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">RAILING SYSTEMS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">CORNER SOLUTIONS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">KITCHEN DELIGHTS</a></li>
+                                        <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                        <li class="mobile-dropdown-item-nested">
+                                            <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                                <span>Pullout Solutions</span>
+                                                <i class="fas fa-chevron-right text-xs"></i>
+                                            </button>
+                                            <!-- Level 3 Dropdown Menu -->
+                                            <div class="mobile-dropdown-menu-nested mobile-dropdown-submenu-nested hidden">
+                                                <ul class="py-1">
+                                                    <li><a href="#" class="mobile-dropdown-link">SS Pullouts</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Wire Baskets</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Other Pullouts</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" class="mobile-dropdown-link">ABOVE & BELOW SINK</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">POLE SYSTEM</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">WARDROBE DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">BATHROOM DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">ALLIEDS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Level 1 Dropdown Items -->
+                            <li><a href="#" class="mobile-dropdown-link">KRYSTA</a></li>
+                            <li><a href="#" class="mobile-dropdown-link">Slimline 304</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h2 class="search-title syne-font">Search</h2>
+                <button id="closeSearch" class="close-search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-content">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" class="search-input syne-font"
+                        placeholder="Search for products, services...">
+                    <button class="search-submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions">
+                    <h3 class="suggestions-title syne-font">Popular Searches</h3>
+                    <div class="suggestions-list">
+                        <a href="#" class="suggestion-item">Kitchen Cabinets</a>
+                        <a href="#" class="suggestion-item">Wardrobe Accessories</a>
+                        <a href="#" class="suggestion-item">Steel Bins</a>
+                        <a href="#" class="suggestion-item">SS Pullouts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form-section py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title-2 text-2xl md:text-4xl font-[600] relative inline-block">Send us a Message</h2>
+                    <p class="text-sm sm:text-base text-gray-600 pb-5">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form class="contact-form mt-8">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-[20px]">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <div class="business-hours mt-8">
+                        <h3 class="hours-title">Business Hours</h3>
+                        <ul class="hours-list">
+                            <li class="hours-item">
+                                <span class="day">Monday - Friday</span>
+                                <span class="time">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="hours-item">
+                                <span class="day">Saturday</span>
+                                <span class="time">10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li class="hours-item">
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Map & Additional Info -->
+                <div class="map-info-wrapper">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <!-- Contact Card -->
+                        <div class="contact-card md:col-span-1">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3 class="card-title">Phone Number</h3>
+                            <p class="card-text">
+                                <a href="tel:+919650100908" class="hover:text-[#a30000] transition-colors">+91-9650100908</a>
+                            </p>
+                        </div>
+                        <!-- Email Card -->
+                        <div class="contact-card md:col-span-1">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="card-title">Email Address</h3>
+                            <p class="card-text">
+                                <a href="mailto:info@slimlinekitchens.com" class="hover:text-[#a30000] transition-colors">info@slimlinekitchens.com</a>
+                            </p>
+                        </div>
+                        <!-- Address Card -->
+                        <div class="contact-card md:col-span-2">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="card-title">Our Location</h3>
+                            <p class="card-text">Slimline (a Product Of Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana, India</p>
+                        </div>
+                    </div>
+                    <div class="map-container mt-5">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.876365377123!2d76.9264!3d28.6864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQxJzEwLjgiTiA3NsKwNTUnMzUuMCJF!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin" 
+                            class="w-full h-[345px]"
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-b from-black to-gray-900 text-gray-300 py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="w-full h-full bg-radial-gradient from-[#a30000] to-black rounded-full mix-blend-screen blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 md:px-10 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 md:gap-8">
+                <div class="col-span-1 sm:col-span-2 md:col-span-3 xl:col-span-1 flex flex-col items-center xl:items-start mb-7 xl:mb-0">
+                    <a href="index.html">
+                        <img src="assets/images/simline-kitchen-logo-2.png" class="w-44" alt="">
+                    </a>
+                    <p class="footer-text text-sm leading-relaxed text-gray-400 mt-5 text-center xl:text-start">Creating beautiful kitchens for modern homes.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-span-1">
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
+                        Quick Links
+                        <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div class="col-span-1">
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
+                        Services
+                        <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Wardrobe Solutions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Bathroom Remodeling
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Installation Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
+                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Custom Cabinetry
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="footer-col space-y-4 col-span-1 sm:col-span-2 md:col-span-1">
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
+                        Contact Us
+                        <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
+                    </h4>
+                    <p class="flex items-start text-gray-400 text-sm">
+                        <i class="fas fa-map-marker-alt mr-3 text-[#a30000] text-base"></i>
+                        Slimline (a Product Of Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana, India
+                    </p>
+                    <p class="flex items-center text-gray-400 text-sm">
+                        <i class="fas fa-phone mr-3 text-[#a30000] text-base"></i>
+                        <a href="tel:+919650100908" class="hover:text-[#a30000] transition-colors duration-300">+91-9650100908</a>
+                    </p>
+                    <p class="flex items-center text-gray-400 text-sm">
+                        <i class="fas fa-envelope mr-3 text-[#a30000] text-base"></i>
+                        <a href="mailto:info@slimlinekitchens.com" class="hover:text-[#a30000] transition-colors duration-300">info@slimlinekitchens.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-divider pt-8 mt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                <p>Copyright © 2018 <span class="text-[#a30000] font-[500]">Slimline</span>. All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- custom js -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html> 

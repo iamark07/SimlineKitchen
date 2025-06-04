@@ -127,36 +127,81 @@ class MobileMenu {
     }
 }
 
+// Mobile Dropdown Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+
+    if (mobileDropdownToggle && mobileDropdownMenu) {
+        mobileDropdownToggle.addEventListener('click', function() {
+            // Toggle active class on button
+            this.classList.toggle('active');
+            
+            // Toggle show class on menu
+            mobileDropdownMenu.classList.toggle('show');
+            
+            // Toggle hidden class
+            if (mobileDropdownMenu.classList.contains('show')) {
+                mobileDropdownMenu.classList.remove('hidden');
+            } else {
+                // Add a small delay before hiding to allow animation to complete
+                setTimeout(() => {
+                    if (!mobileDropdownMenu.classList.contains('show')) {
+                        mobileDropdownMenu.classList.add('hidden');
+                    }
+                }, 300);
+            }
+        });
+    }
+});
+
 // Initialize global components when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize header scroll effect
     const headerScroll = new HeaderScroll();
     new MobileMenu();
     new SearchOverlay();
-
-    // --- Nested Mobile Dropdown Functionality ---
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenu) {
-        const nestedDropdownItems = mobileMenu.querySelectorAll('.dropdown-item-nested');
-
-        nestedDropdownItems.forEach(item => {
-            const button = item.querySelector('.dropdown-item');
-            if (button) {
-                button.addEventListener('click', function(event) {
-                    // Prevent the default link behavior if the button is also a link
-                    event.preventDefault();
-                    // Toggle the active class on the parent nested item
-                    item.classList.toggle('active');
-
-                    // Optional: Close other open nested dropdowns at the same level
-                    nestedDropdownItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.parentElement === item.parentElement) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                });
-            }
-        });
-    }
 });
 
+
+// Mobile Navigation Dropdown Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle main Products dropdown
+    const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+    
+    if (mobileDropdownToggle && mobileDropdownMenu) {
+        mobileDropdownToggle.addEventListener('click', function() {
+            mobileDropdownMenu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            icon.style.transform = mobileDropdownMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    }
+
+    // Handle nested dropdowns
+    const nestedDropdownButtons = document.querySelectorAll('.mobile-dropdown-item-nested > button');
+    
+    nestedDropdownButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const nestedMenu = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            // Close other open nested menus at the same level
+            const siblings = this.parentElement.parentElement.querySelectorAll('.mobile-dropdown-menu-nested:not(.hidden)');
+            siblings.forEach(sibling => {
+                if (sibling !== nestedMenu) {
+                    sibling.classList.add('hidden');
+                    const siblingIcon = sibling.previousElementSibling.querySelector('i');
+                    if (siblingIcon) {
+                        siblingIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+
+            // Toggle current nested menu
+            nestedMenu.classList.toggle('hidden');
+            icon.style.transform = nestedMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(90deg)';
+        });
+    });
+}); 

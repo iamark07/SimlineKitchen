@@ -14,26 +14,17 @@
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/product-details.css"> <!-- Linking a new CSS for specific styles -->
     <title>Product Details - Simline Kitchen</title>
-    <style>
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .product-image-gallery img {
-            transition: transform 0.3s ease-in-out;
-        }
-        .product-image-gallery img:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50 overflow-x-hidden">
 
-    <!-- Top Header - Placeholder, copy from index.html or about-us.html -->
+    <!-- Top Header -->
     <div class="top-header hidden md:block">
         <div class="container mx-auto px-6 md:px-10 py-2">
             <div class="header-content">
@@ -60,7 +51,7 @@
         </div>
     </div>
 
-    <!-- Navigation - Placeholder, copy from index.html or about-us.html -->
+    <!-- Navigation -->
     <header class="main-header border-b border-[#f5f5f527]">
         <div class="container mx-auto px-6 md:px-10 py-3">
             <div class="nav-wrapper">
@@ -124,7 +115,6 @@
                                 <a href="#" class="dropdown-item">Slimline 304</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-link">Services</a>
                         <a href="#" class="nav-link">Contact</a>
                     </nav>
                     <div class="flex gap-5">
@@ -144,9 +134,9 @@
 
     </header>
 
-    <!-- Mobile Menu Overlay - Placeholder, copy from index.html or about-us.html -->
+    <!-- Mobile Menu Overlay -->
     <div id="mobileMenuOverlay" class="mobile-overlay"></div>
-    <!-- Mobile Menu - Placeholder, copy from index.html or about-us.html -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
         <div class="mobile-menu-content">
             <div class="mobile-menu-header">
@@ -158,46 +148,58 @@
             <nav class="mobile-nav text-nowrap uppercase syne-font">
                 <a href="index.html" class="mobile-nav-link">Home</a>
                 <a href="about-us.html" class="mobile-nav-link">About</a>
-                <div class="nav-dropdown">
-                    <a class="mobile-nav-link uppercase syne-font hover:!px-[8px]">
-                        Products
-                        <i class="fas fa-chevron-down ml-2"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <!-- Level 1 Dropdown Item with Nested Dropdown -->
-                        <div class="dropdown-item-nested">
-                            <button class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
-                                Kitchen Accessories
-                                <i class="fas fa-chevron-right text-xs ml-2"></i>
-                            </button>
-                            <!-- Level 2 Dropdown Menu -->
-                            <div class="dropdown-menu-nested uppercase syne-font">
-                                <a href="#" class="dropdown-item">Cabinet Hinges</a>
-                                <a href="#" class="dropdown-item">Tandem Box</a>
-                                <!-- Level 2 Dropdown Item with Nested Dropdown -->
-                                <div class="dropdown-item-nested">
-                                    <button
-                                        class="dropdown-item flex items-center justify-between w-full uppercase syne-font">
-                                        Pullout Solutions
-                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
-                                    </button>
-                                    <!-- Level 3 Dropdown Menu -->
-                                    <div class="dropdown-menu-nested sub-dropdown-menu-nested uppercase syne-font">
-                                        <a href="#" class="dropdown-item">SS Pullouts</a>
-                                        <a href="#" class="dropdown-item">Wire Baskets</a>
-                                        <a href="#" class="dropdown-item">Other Pullouts</a>
-                                    </div>
+                <div class="mobile-nav-dropdown">
+                    <button
+                        class="mobile-nav-link w-full flex items-center justify-between mobile-dropdown-toggle hover:!px-[10px]">
+                        <span>Products</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden">
+                        <ul class="py-1">
+                            <!-- Level 1 Dropdown Item with Nested Dropdown -->
+                            <li class="mobile-dropdown-item-nested">
+                                <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                    <span>For Life</span>
+                                    <i class="fas fa-chevron-right text-xs"></i>
+                                </button>
+                                <!-- Level 2 Dropdown Menu -->
+                                <div class="mobile-dropdown-menu-nested hidden">
+                                    <ul class="py-1">
+                                        <li><a href="#" class="mobile-dropdown-link">MULTIUSE BASKETS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">EASY PULLOUTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">LARGE ORGANISERS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">RAILING SYSTEMS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">CORNER SOLUTIONS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">KITCHEN DELIGHTS</a></li>
+                                        <!-- Level 2 Dropdown Item with Nested Dropdown -->
+                                        <li class="mobile-dropdown-item-nested">
+                                            <button class="mobile-dropdown-link w-full flex items-center justify-between">
+                                                <span>Pullout Solutions</span>
+                                                <i class="fas fa-chevron-right text-xs"></i>
+                                            </button>
+                                            <!-- Level 3 Dropdown Menu -->
+                                            <div class="mobile-dropdown-menu-nested mobile-dropdown-submenu-nested hidden">
+                                                <ul class="py-1">
+                                                    <li><a href="#" class="mobile-dropdown-link">SS Pullouts</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Wire Baskets</a></li>
+                                                    <li><a href="#" class="mobile-dropdown-link">Other Pullouts</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" class="mobile-dropdown-link">ABOVE & BELOW SINK</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">POLE SYSTEM</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">WARDROBE DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">BATHROOM DELIGHTS</a></li>
+                                        <li><a href="#" class="mobile-dropdown-link">ALLIEDS</a></li>
+                                    </ul>
                                 </div>
-                                <a href="#" class="dropdown-item">Rolling Shutters</a>
-                            </div>
-                        </div>
-                        <!-- Level 1 Dropdown Item -->
-                        <a href="#" class="dropdown-item">Wardrobe Accessories</a>
-                        <!-- Level 1 Dropdown Item -->
-                        <a href="#" class="dropdown-item">Bathroom Fittings</a>
+                            </li>
+                            <!-- Level 1 Dropdown Items -->
+                            <li><a href="#" class="mobile-dropdown-link">KRYSTA</a></li>
+                            <li><a href="#" class="mobile-dropdown-link">Slimline 304</a></li>
+                        </ul>
                     </div>
                 </div>
-                <a href="#" class="mobile-nav-link">Services</a>
                 <a href="#" class="mobile-nav-link">Contact</a>
             </nav>
         </div>
@@ -234,218 +236,120 @@
     </div>
 
     <!-- Product Details Section -->
-    <section class="product-details-section pt-12 md:pt-16 pb-24 bg-gradient-to-b from-gray-50 to-white">
+    <section class="py-10 lg:py-16 bg-gray-50">
         <div class="container mx-auto px-6 md:px-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-10 xl:gap-12 relative">
+            <!-- Added Breadcrumbs (Optional, good practice for product pages) -->
+            <nav class="hidden lg:block text-sm mb-6 text-gray-600" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-gray-600 hover:text-[#a30000]">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                        </svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="#" class="text-gray-600 hover:text-[#a30000]">Cabinet Hinges</a>
+                        <!-- Dynamic Category -->
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512">
+                            <path
+                                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <span class="text-[#a30000]">MS 3D HYDRAULIC HINGE</span> <!-- Dynamic Product Name -->
+                    </li>
+                </ol>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Left Column: Enhanced Image Gallery -->
                 <div class="product-image-gallery lg:sticky lg:top-[152.667px] h-fit">
-                    <div class="transform transition-transform duration-300">
+                    <div class="transform transition-transform duration-300 grid grid-cols-9 gap-5">
                         <!-- Main Image with Zoom Effect -->
-                        <div class="main-image mb-6 relative group overflow-hidden">
-                            <img src="assets/images/slider/slider-1.jpg" alt="Basic hooded sweatshirt in pink" 
-                                 class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="main-image mb-6 relative group col-span-9 xl:col-span-7">
+                            <img src="assets/images/Products/1.jpg" alt="Basic hooded sweatshirt in pink"
+                                class="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500">
                             <!-- Enhanced Image Navigation -->
-                            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
+                            <button
+                                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
                                 <i class="fas fa-chevron-left text-gray-800 text-lg"></i>
                             </button>
-                            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
+                            <button
+                                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white">
                                 <i class="fas fa-chevron-right text-gray-800 text-lg"></i>
                             </button>
                             <!-- Zoom Indicator -->
-                            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="hidden lg:block zoom-indicator absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <i class="fas fa-search-plus mr-1"></i> Click to zoom
                             </div>
                         </div>
                         <!-- Enhanced Thumbnail Gallery -->
-                        <div class="thumbnail-images flex gap-4 overflow-x-auto scrollbar-hide">
-                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
-                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 1" 
-                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
-                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="thumbnail-images flex xl:flex-col gap-4 overflow-x-auto col-span-9 xl:col-span-2">
+                            <div
+                                class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%] xl:w-full">
+                                <img src="assets/images/Products/1.jpg" alt="Thumbnail 1"
+                                    class="w-full h-24 object-cover border-2 border-transparent group-hover:border-[#a30000] transition-all duration-300">
+                                <div
+                                    class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
                             </div>
-                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
-                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 2" 
-                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
-                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div
+                                class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%] xl:w-full">
+                                <img src="assets/images/Products/3.jpg" alt="Thumbnail 2"
+                                    class="w-full h-24 object-cover border-2 border-transparent group-hover:border-[#a30000] transition-all duration-300">
+                                <div
+                                    class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
                             </div>
-                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
-                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 3" 
-                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
-                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            </div>
-                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
-                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 4" 
-                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
-                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            </div>
-                            <div class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%]">
-                                <img src="assets/images/slider/slider-1.jpg" alt="Thumbnail 5" 
-                                     class="w-full h-24 object-cover border-2 border-transparent group-hover:border-teal-500 transition-all duration-300">
-                                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div
+                                class="thumbnail-item relative group cursor-pointer flex-shrink-0 w-[25%] sm:flex-shrink sm:w-[20%] xl:w-full">
+                                <img src="assets/images/Products/4.jpg" alt="Thumbnail 3"
+                                    class="w-full h-24 object-cover border-2 border-transparent group-hover:border-[#a30000] transition-all duration-300">
+                                <div
+                                    class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Enhanced Product Information -->
-                <div class="product-info">
-                    <!-- Brand and Title Section -->
-                    <div class="mb-7">
-                        <span class="text-teal-600 font-medium tracking-wider text-sm uppercase mb-2 block syne-font">Premium Collection</span>
-                        <h1 class="product-title text-2xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight syne-font">BOTTLE BASKET</h1>
-                        <div class="flex items-center gap-2">
-                            <div class="rating flex items-center">
-                                <div class="text-yellow-400 flex gap-0.5">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="ml-2 text-gray-600 text-sm">4.8 (12 reviews)</span>
-                            </div>
-                            <span class="text-gray-300">|</span>
-                            <span class="text-green-600 text-sm font-medium flex items-center">
-                                <i class="fas fa-check-circle mr-1"></i> In Stock
-                            </span>
-                        </div>
-                    </div>
+                <!-- Right Column: Product Details -->
+                <div class="product-details">
+                    <!-- Product Name -->
+                    <h1 class="text-2xl md:text-3xl  font-[500] text-gray-900 mb-4 leading-tight poppins">MS 3D
+                        HYDRAULIC HINGE</h1> 
+                    <!-- Product Category -->
+                    <p class="mb-6 font-[400]">Category: <span class="text-[#a30000]">Cabinet Hinges</span></p>
 
-                    <!-- Enhanced Price Section -->
-                    <div class="price-section mb-8 bg-gray-50 rounded-xl">
-                        <div class="flex items-baseline gap-3">
-                            <div class="current-price text-3xl font-semibold text-gray-900">$15.50</div>
-                            <div class="original-price text-lg text-gray-500 line-through">$31.00</div>
-                            <div class="discount-badge bg-[#ffdfdf] text-[#a30000] px-2.5 py-1 rounded-full text-sm font-[500]">-50% OFF</div>
-                        </div>
-                        <p class="text-green-600 text-sm mt-2 flex items-center">
-                            <i class="fas fa-tag mr-1"></i> Limited time offer - Ends soon
+                    <!-- Product Description -->
+                    <div class="mb-8">
+                        <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">Description</h2>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            
+                            Weight: 118 Grams/Pc
+                            
                         </p>
                     </div>
 
-                    <!-- Enhanced Specifications -->
-                    <div class="product-specs mb-8">
-                        <h3 class="sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                            <i class="fas fa-list-ul mr-2 text-teal-600"></i> Specifications
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
-                                <span class="text-gray-800 text-sm block font-[500]">Cabinet Width</span>
-                                <span class="text-gray-900 font-[300] text-xs">450/500/600/700/800/900 mm</span>
-                            </div>
-                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
-                                <span class="text-gray-800 text-sm block font-[500]">Compatible With</span>
-                                <span class="text-gray-900 font-[300] text-xs">Telescopic Slides</span>
-                            </div>
-                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
-                                <span class="text-gray-800 text-sm block font-[500]">Loading Capacity</span>
-                                <span class="text-gray-900 font-[300] text-xs">25 Kgs</span>
-                            </div>
-                            <div class="spec-item p-3 bg-[#f6f6f6] rounded-lg">
-                                <span class="text-gray-800 text-sm block font-[500]">Material</span>
-                                <span class="text-gray-900 font-[300] text-xs">Annealed Stainless Steel</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="action-buttons space-y-4 mb-8 hidden">
-                        <div class="quantity-selector flex items-center gap-4">
-                            <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <input type="number" value="1" min="1" 
-                                       class="w-16 text-center border-x border-gray-200 py-2 focus:outline-none">
-                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <button class="flex-1 bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg shadow-teal-600/20">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                        <button class="w-full border-2 border-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center gap-2">
-                            <i class="far fa-heart"></i>
-                            Add to Wishlist
-                        </button>
-                    </div>
-
-                    <!-- Enhanced Delivery Information -->
-                    <div class="delivery-info mb-8 hidden">
-                        <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-xl">
-                            <div class="text-blue-600 text-xl">
-                                <i class="fas fa-truck"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Free Delivery</h4>
-                                <p class="text-gray-600 text-sm">Free standard shipping on orders over $35</p>
-                                <div class="mt-2 text-sm">
-                                    <span class="text-gray-900 font-medium">Estimated delivery:</span>
-                                    <span class="text-gray-600">2-4 business days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Trust Badges -->
-                    <div class="trust-badges flex flex-wrap sm:grid sm:grid-cols-3 gap-4 text-center justify-center sm:justify-start">
-                        <div class="trust-item p-3">
-                            <i class="fas fa-shield-alt text-teal-600 text-xl mb-2"></i>
-                            <p class="text-sm text-gray-600">Secure Payment</p>
-                        </div>
-                        <div class="trust-item p-3">
-                            <i class="fas fa-undo text-teal-600 text-xl mb-2"></i>
-                            <p class="text-sm text-gray-600">Easy Returns</p>
-                        </div>
-                        <div class="trust-item p-3">
-                            <i class="fas fa-headset text-teal-600 text-xl mb-2"></i>
-                            <p class="text-sm text-gray-600">24/7 Support</p>
-                        </div>
-                    </div>
-
-                    <!-- Enhanced Dimensions Table -->
-                    <div class="product-dimensions mt-8">
-                        <h4 class="sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                            <i class="fas fa-ruler-combined mr-2 text-teal-600"></i> Available Sizes
-                        </h4>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="bg-[#f6f6f6]">
-                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Width (cm)</th>
-                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Depth (cm)</th>
-                                        <th class="px-4 py-3 text-gray-600 text-xs sm:text-sm font-[500]">Height (cm)</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">15</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">17</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">19</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">21</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">20</td>
-                                        <td class="px-4 py-3 text-gray-900 text-xs font-[300]">6</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <!-- Add more details here like features, specifications, etc. -->
+                    <div class="mb-8">
+                        <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">Key Features</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                            <li>Feature 1: High durability and smooth operation.</li>
+                            <li>Feature 2: Easy 3D adjustment for perfect alignment.</li>
+                            <li>Feature 3: Integrated hydraulic soft-close mechanism.</li>
+                            <li>Feature 4: Suitable for standard cabinet door applications.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer - Placeholder, copy from index.html or about-us.html -->
+    <!-- Footer  -->
     <footer class="footer bg-gradient-to-b from-black to-gray-900 text-gray-300 py-16 md:py-20 relative overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-10">
             <div
@@ -457,7 +361,7 @@
                 <div
                     class="col-span-1 sm:col-span-2 md:col-span-3 xl:col-span-1 flex flex-col items-center xl:items-start mb-7 xl:mb-0">
                     <a href="index.html">
-                        <img src="assets/images/simline-kitchen-logo-2.png" class="w-44" alt="">
+                        <img src="assets/images/starray-india-logo-2.png" class="w-44" alt="">
                     </a>
                     <p class="footer-text text-sm leading-relaxed text-gray-400 mt-5 text-center xl:text-start">Creating
                         beautiful kitchens for modern homes.</p>
@@ -546,6 +450,7 @@
 
     <!-- custom js -->
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/product-details.js"></script>
 </body>
 
 </html> 
