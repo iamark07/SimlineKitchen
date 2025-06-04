@@ -387,29 +387,51 @@
 }
 
 /* Form Validation Styles */
-.form-input.error,
-.form-textarea.error {
-  border-color: #dc2626;
-}
-
 .error-message {
-  color: #dc2626;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease-out;
 }
 
-/* Success Message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .success-message {
-  background: #ecfdf5;
-  border: 1px solid #10b981;
-  color: #065f46;
-  padding: 1rem;
+  color: #047857;
+  background-color: #dcfce7;
+  border-color: #86efac;
+  margin-top: 1rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
+  border-width: 1px;
   display: none;
 }
 
-.success-message.show {
-  display: block;
-  animation: fadeInUp 0.6s ease-out forwards;
+.error-message-submission {
+  color: #b91c1c;
+  border-color: #fca5a5;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  display: none;
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #b91c1c !important;
+}
+
+.form-input.valid,
+.form-textarea.valid {
+  border-color: #a30000 !important;
 }

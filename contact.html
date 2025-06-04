@@ -112,7 +112,7 @@
                                 <a href="#" class="dropdown-item">Slimline 304</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
                     </nav>
                     <div class="flex gap-5">
                         <button id="searchToggle"
@@ -197,7 +197,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
             </nav>
         </div>
     </div>
@@ -241,30 +241,38 @@
                     <h2 class="section-title-2 text-2xl md:text-4xl font-[600] relative inline-block">Send us a Message</h2>
                     <p class="text-sm sm:text-base text-gray-600 pb-5">Fill out the form below and we'll get back to you as soon as possible.</p>
                     
-                    <form class="contact-form mt-8">
+                    <form id="contactForm" class="contact-form mt-8">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name" class="form-label">Full Name</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name">
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address">
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number">
                             </div>
                             <div class="form-group">
                                 <label for="subject" class="form-label">Subject</label>
-                                <input type="text" id="subject" name="subject" class="form-input" required>
+                                <select id="subject" name="subject" class="form-input">
+                                    <option value="">Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Product Information">Product Information</option>
+                                    <option value="Price Quote">Price Quote</option>
+                                    <option value="Installation">Installation</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Other">Other</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group mt-[20px]">
                             <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" rows="6" class="form-textarea" required></textarea>
+                            <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="Enter your message"></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn mt-5">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane ml-2"></i>
                         </button>
@@ -336,114 +344,95 @@
 
     <!-- Footer -->
     <footer class="footer bg-gradient-to-b from-black to-gray-900 text-gray-300 py-16 md:py-20 relative overflow-hidden">
+        <!-- Subtle background gradient/objects -->
         <div class="absolute inset-0 z-0 opacity-10">
-            <div class="w-full h-full bg-radial-gradient from-[#a30000] to-black rounded-full mix-blend-screen blur-3xl"></div>
+            <div
+                class="w-full h-full bg-radial-gradient from-[#a30000] to-black rounded-full mix-blend-screen blur-3xl">
+            </div>
         </div>
         <div class="container mx-auto px-6 md:px-10 relative z-10">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 md:gap-8">
-                <div class="col-span-1 sm:col-span-2 md:col-span-3 xl:col-span-1 flex flex-col items-center xl:items-start mb-7 xl:mb-0">
+                <div
+                    class="col-span-1 sm:col-span-2 md:col-span-3 xl:col-span-1 flex flex-col items-center xl:items-start mb-7 xl:mb-0">
                     <a href="index.html">
                         <img src="assets/images/simline-kitchen-logo-2.png" class="w-44" alt="">
                     </a>
-                    <p class="footer-text text-sm leading-relaxed text-gray-400 mt-5 text-center xl:text-start">Creating beautiful kitchens for modern homes.</p>
+                    <p class="footer-text text-sm leading-relaxed text-gray-400 mt-5 text-center xl:text-start">Creating
+                        beautiful kitchens for modern homes.</p>
                     <div class="flex space-x-4 mt-6">
-                        <a href="#" class="text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-xl"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <!-- Quick Links -->
                 <div class="col-span-1">
-                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
-                        Quick Links
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Quick Links
                         <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
                     </h4>
                     <ul class="space-y-3">
-                        <li>
-                            <a href="index.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about-us.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Contact
-                            </a>
-                        </li>
+                        <li><a href="/"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
+                        <li><a href="about-us.html"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> About Us</a></li>
+                        <li><a href="#products"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Products</a></li>
+                        <li><a href="#gallery"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Projects</a></li>
+                        <li><a href="contact.html"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
                     </ul>
                 </div>
-                <!-- Services -->
                 <div class="col-span-1">
-                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
-                        Services
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Services
                         <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
                     </h4>
                     <ul class="space-y-3">
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Wardrobe Solutions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Bathroom Remodeling
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Installation Services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim">
-                                <i class="fas fa-chevron-right mr-2 text-xs"></i> Custom Cabinetry
-                            </a>
-                        </li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Wardrobe Solutions</a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Bathroom Remodeling</a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Installation Services</a></li>
+                        <li><a href="#"
+                                class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
+                                    class="fas fa-chevron-right mr-2 text-xs"></i> Custom Cabinetry</a></li>
                     </ul>
                 </div>
                 <!-- Contact Info -->
                 <div class="footer-col space-y-4 col-span-1 sm:col-span-2 md:col-span-1">
-                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">
-                        Contact Us
+                    <h4 class="footer-title text-white text-lg font-semibold mb-6 relative syne-font">Contact Us
                         <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
                     </h4>
-                    <p class="flex items-start text-gray-400 text-sm">
-                        <i class="fas fa-map-marker-alt mr-3 text-[#a30000] text-base"></i>
-                        Slimline (a Product Of Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana, India
-                    </p>
-                    <p class="flex items-center text-gray-400 text-sm">
-                        <i class="fas fa-phone mr-3 text-[#a30000] text-base"></i>
-                        <a href="tel:+919650100908" class="hover:text-[#a30000] transition-colors duration-300">+91-9650100908</a>
-                    </p>
-                    <p class="flex items-center text-gray-400 text-sm">
-                        <i class="fas fa-envelope mr-3 text-[#a30000] text-base"></i>
-                        <a href="mailto:info@slimlinekitchens.com" class="hover:text-[#a30000] transition-colors duration-300">info@slimlinekitchens.com</a>
+                    <p class="flex items-start text-gray-400 text-sm"><i
+                            class="fas fa-map-marker-alt mr-3 text-[#a30000] text-base"></i>Slimline (a Product Of
+                        Sunlight Home Products) 1289, Modern Industrial Estate, Part B, Bahadurgarh - 124507, Haryana,
+                        India</p>
+                    <p class="flex items-center text-gray-400 text-sm"><i
+                            class="fas fa-phone mr-3 text-[#a30000] text-base"></i><a href="tel:+919650100908"
+                            class="hover:text-[#a30000] transition-colors duration-300">+91-9650100908</a></p>
+                    <p class="flex items-center text-gray-400 text-sm"><i
+                            class="fas fa-envelope mr-3 text-[#a30000] text-base"></i><a
+                            href="mailto:info@slimlinekitchens.com"
+                            class="hover:text-[#a30000] transition-colors duration-300">info@slimlinekitchens.com</a>
                     </p>
                 </div>
             </div>

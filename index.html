@@ -114,7 +114,7 @@
                                 <a href="#" class="dropdown-item">Slimline 304</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
                     </nav>
                     <div class="flex gap-5">
                         <button id="searchToggle"
@@ -199,7 +199,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
             </nav>
         </div>
     </div>
@@ -938,65 +938,43 @@
 
             <div class="grid lg:grid-cols-7 gap-8">
                 <!-- Contact Form -->
-                <div
-                    class="lg:col-span-4 bg-white rounded-lg shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
-                    <form class="grid grid-cols-2 gap-x-8 gap-y-3">
-                        <div class="form-group relative col-span-2">
-                            <input type="text" id="name" class="form-input peer" placeholder=" " required>
-                            <label for="name"
-                                class="form-label absolute left-0 top-0 pt-5 text-sm text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your
-                                Name</label>
-                            <div
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300">
+                <div class="lg:col-span-4 bg-white rounded-lg shadow-lg p-8 transform hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="section-title-2 text-xl md:text-3xl font-[600] relative inline-block mb-2">Send us a Message</h2>
+                    <p class="text-sm sm:text-base text-gray-600 pb-5">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form id="contactFormIndex" class="contact-form mt-8">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nameIndex" class="form-label">Full Name</label>
+                                <input type="text" id="nameIndex" name="name" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="emailIndex" class="form-label">Email Address</label>
+                                <input type="email" id="emailIndex" name="email" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneIndex" class="form-label">Phone Number</label>
+                                <input type="tel" id="phoneIndex" name="phone" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="subjectIndex" class="form-label">Subject</label>
+                                <select id="subjectIndex" name="subject" class="form-input">
+                                    <option value="">Select a subject</option>
+                                    <option value="product-inquiry">Product Inquiry</option>
+                                    <option value="installation">Installation</option>
+                                    <option value="support">Support</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="form-group relative col-span-2 sm:col-span-1">
-                            <input type="email" id="email" class="form-input peer" placeholder=" " required>
-                            <label for="email"
-                                class="form-label absolute left-0 top-0 pt-5 text-sm text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your
-                                Email</label>
-                            <div
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300">
-                            </div>
+                        <div class="form-group mt-[20px]">
+                            <label for="messageIndex" class="form-label">Your Message</label>
+                            <textarea id="messageIndex" name="message" rows="6" class="form-textarea"></textarea>
                         </div>
-
-                        <div class="form-group relative col-span-2 sm:col-span-1">
-                            <input type="tel" id="phone" class="form-input peer" placeholder=" " required>
-                            <label for="phone"
-                                class="form-label absolute left-0 top-0 pt-5 text-sm text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Phone
-                                Number</label>
-                            <div
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300">
-                            </div>
-                        </div>
-
-                        <div class="form-group relative col-span-2">
-                            <input type="text" id="subject" class="form-input peer" placeholder=" " required>
-                            <label for="subject"
-                                class="form-label absolute left-0 top-0 pt-5 text-sm text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Subject</label>
-                            <div
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300">
-                            </div>
-                        </div>
-
-                        <div class="form-group relative col-span-2">
-                            <textarea id="message" rows="4" class="form-textarea peer resize-none" placeholder=" "
-                                required></textarea>
-                            <label for="message"
-                                class="form-label absolute left-0 top-0 pt-5 text-sm text-gray-500 transition-all duration-300 transform origin-left peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#a30000] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100">Your
-                                Message</label>
-                            <div
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200 peer-focus:h-0.5 peer-focus:bg-[#a30000] transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="col-span-2 flex justify-center">
-                            <button type="submit" class="btn btn-icon">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-
+                        <button type="submit" class="submit-btn mt-5">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
                     </form>
                 </div>
 
@@ -1116,10 +1094,10 @@
                         <span class="block w-10 h-0.5 bg-[#a30000] mt-2"></span>
                     </h4>
                     <ul class="space-y-3">
-                        <li><a href="#hero"
+                        <li><a href="/"
                                 class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
                                     class="fas fa-chevron-right mr-2 text-xs"></i> Home</a></li>
-                        <li><a href="#about"
+                        <li><a href="about-us.html"
                                 class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
                                     class="fas fa-chevron-right mr-2 text-xs"></i> About Us</a></li>
                         <li><a href="#products"
@@ -1128,7 +1106,7 @@
                         <li><a href="#gallery"
                                 class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
                                     class="fas fa-chevron-right mr-2 text-xs"></i> Projects</a></li>
-                        <li><a href="#contact"
+                        <li><a href="contact.html"
                                 class="footer-link text-gray-400 hover:text-[#a30000] transition-colors duration-300 text-sm flex items-center footer-underline-anim"><i
                                     class="fas fa-chevron-right mr-2 text-xs"></i> Contact</a></li>
                     </ul>

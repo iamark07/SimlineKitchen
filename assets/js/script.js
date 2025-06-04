@@ -261,3 +261,243 @@ $(document).ready(function () {
       }
   });
 });
+
+// landing page form validation
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to initialize form validation for a given form
+    function initializeFormValidation(formId, inputConfig) {
+        const form = document.getElementById(formId);
+        if (!form) {
+            console.error(`Form element with ID "${formId}" not found!`);
+            return;
+        }
+
+        // Map input keys to their elements, errors, and validation logic
+        const inputs = {};
+        Object.entries(inputConfig).forEach(([key, config]) => {
+            const inputElement = document.getElementById(config.inputId);
+            if (!inputElement) {
+                console.error(`Form input element with ID "${config.inputId}" for key "${key}" not found!`);
+                return;
+            }
+            inputs[key] = {
+                input: inputElement,
+                error: createErrorElement(),
+                validate: config.validate
+            };
+        });
+
+        checkInputElements(inputs);
+        addErrorElements(inputs);
+        setupRealtimeValidation(inputs);
+        form.addEventListener('submit', (e) => handleFormSubmit(e, inputs, form));
+        console.log(`Form validation initialized for form ID: ${formId}`);
+    }
+
+    function createErrorElement() {
+        const error = document.createElement('p');
+        error.className = 'text-red-500 text-xs mt-1 error-message';
+        error.style.display = 'none';
+        return error;
+    }
+
+    function checkInputElements(inputsMap) {
+        Object.keys(inputsMap).forEach(key => {
+            if (!inputsMap[key].input) {
+                console.error(`Input element for key "${key}" is missing in the inputs map.`);
+            }
+        });
+    }
+
+    function addErrorElements(inputsMap) {
+        Object.values(inputsMap).forEach(({input, error}) => {
+            if (input && input.parentNode) {
+                let container = input.closest('.form-group');
+                if (container) {
+                    container.appendChild(error);
+                } else {
+                    if (input.tagName === 'SELECT' && input.parentNode.classList.contains('relative')) {
+                        input.parentNode.after(error);
+                    } else {
+                        input.after(error);
+                    }
+                }
+            }
+        });
+    }
+
+    function validateInput(key, inputsMap) {
+        const {input, error, validate} = inputsMap[key];
+        if (!input || !error) return false;
+
+        const value = input.value;
+        const errorMessage = validate(value);
+
+        if (errorMessage) {
+            error.textContent = errorMessage;
+            error.style.display = 'block';
+            input.classList.add('border-red-500');
+            input.classList.remove('border-gray-200');
+            if (input.tagName === 'SELECT' && input.parentNode.classList.contains('relative')) {
+                input.parentNode.classList.add('border-red-500');
+                input.parentNode.classList.remove('border-gray-200');
+            }
+            return false;
+        } else {
+            error.style.display = 'none';
+            input.classList.remove('border-red-500');
+            input.classList.add('border-gray-200');
+            if (input.tagName === 'SELECT' && input.parentNode.classList.contains('relative')) {
+                input.parentNode.classList.remove('border-red-500');
+                input.parentNode.classList.add('border-gray-200');
+            }
+            return true;
+        }
+    }
+
+    function validateForm(inputsMap) {
+        let isValid = true;
+        Object.keys(inputsMap).forEach(key => {
+            if (!validateInput(key, inputsMap)) {
+                isValid = false;
+            }
+        });
+        return isValid;
+    }
+
+    function setupRealtimeValidation(inputsMap) {
+        Object.entries(inputsMap).forEach(([key, {input}]) => {
+            if (!input) return;
+
+            if (key === 'phone') {
+                input.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+                    validateInput(key, inputsMap);
+                });
+                input.addEventListener('blur', () => validateInput(key, inputsMap));
+            }
+            else if (key === 'name') {
+                input.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/\d/g, '');
+                    validateInput(key, inputsMap);
+                });
+                input.addEventListener('blur', () => validateInput(key, inputsMap));
+            }
+            else if (key === 'subject') {
+                input.addEventListener('change', () => validateInput(key, inputsMap));
+                input.addEventListener('blur', () => validateInput(key, inputsMap));
+            }
+            else {
+                input.addEventListener('input', () => validateInput(key, inputsMap));
+                input.addEventListener('blur', () => validateInput(key, inputsMap));
+            }
+        });
+    }
+
+    function showSuccessMessage(formElement) {
+        removeMessageElements();
+
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message mt-4 p-3 text-center rounded-lg text-green-700 bg-green-100 border border-green-200';
+        successMessage.textContent = 'Thank you for your message. We will get back to you soon!';
+
+        if (formElement && formElement.parentNode) {
+            formElement.parentNode.insertBefore(successMessage, formElement.nextSibling);
+            successMessage.style.display = 'block';
+        }
+
+        setTimeout(() => {
+            if (successMessage && successMessage.parentNode) {
+                successMessage.parentNode.removeChild(successMessage);
+            }
+        }, 5000);
+    }
+
+    function removeMessageElements() {
+        const existingMessages = document.querySelectorAll('.success-message, .error-message-submission');
+        existingMessages.forEach(msg => msg.parentNode.removeChild(msg));
+    }
+
+    async function handleFormSubmit(e, inputsMap, formElement) {
+        e.preventDefault();
+        removeMessageElements();
+
+        const isFormValid = validateForm(inputsMap);
+
+        if (!isFormValid) {
+            const firstInvalidKey = Object.keys(inputsMap).find(key => !validateInput(key, inputsMap));
+            if (firstInvalidKey && inputsMap[firstInvalidKey].input) {
+                const targetInput = inputsMap[firstInvalidKey].input;
+                targetInput.focus();
+                targetInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
+
+        showSuccessMessage(formElement);
+        formElement.reset();
+        Object.values(inputsMap).forEach(({input, error}) => {
+            if (input) {
+                input.classList.remove('border-red-500');
+                input.classList.add('border-gray-200');
+                if (input.tagName === 'SELECT' && input.parentNode.classList.contains('relative')) {
+                    input.parentNode.classList.remove('border-red-500');
+                    input.parentNode.classList.add('border-gray-200');
+                }
+            }
+            if (error) {
+                error.style.display = 'none';
+            }
+        });
+    }
+
+    // Define configuration for the contact form in index.html
+    const indexContactFormConfig = {
+        name: {
+            inputId: 'nameIndex',
+            validate: (value) => {
+                if (!value.trim()) return 'This field is required';
+                if (value.length < 3) return 'Name must be at least 3 characters';
+                if (value.length > 60) return 'Name cannot exceed 60 characters';
+                if (/\d/.test(value)) return 'Name cannot contain numbers';
+                return '';
+            }
+        },
+        email: {
+            inputId: 'emailIndex',
+            validate: (value) => {
+                if (!value.trim()) return 'This field is required';
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailRegex.test(value)) return 'Please enter a valid email address';
+                return '';
+            }
+        },
+        phone: {
+            inputId: 'phoneIndex',
+            validate: (value) => {
+                if (!value.trim()) return 'This field is required';
+                if (!/^[6-9]/.test(value)) return 'Phone number must start with 6, 7, 8, or 9';
+                if (!/^\d{10}$/.test(value)) return 'Phone number must be exactly 10 digits';
+                return '';
+            }
+        },
+        subject: {
+            inputId: 'subjectIndex',
+            validate: (value) => {
+                if (!value || value === '') return 'Please select a subject';
+                return '';
+            }
+        },
+        message: {
+            inputId: 'messageIndex',
+            validate: (value) => {
+                if (!value.trim()) return 'This field is required';
+                if (value.length < 10) return 'Message must be at least 10 characters';
+                return '';
+            }
+        }
+    };
+
+    // Initialize validation for the contact form in index.html
+    initializeFormValidation('contactFormIndex', indexContactFormConfig);
+});
